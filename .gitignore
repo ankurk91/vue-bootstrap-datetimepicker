@@ -68,3 +68,4 @@ composer.phar
 *.key
 
 # Project related
+*.tgz
