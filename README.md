@@ -83,9 +83,10 @@ npm run dev
 ``
 * This should open the demo page at ``http://localhost:8080``
 
-### todos
+### todo
 * Inline mode
-* Publish on npm
+* Publish on bower
+* Date range example
 
 ### License
 [MIT](LICENSE.txt) License

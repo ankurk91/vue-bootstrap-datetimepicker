@@ -70,12 +70,14 @@
           <div class="panel-body">
             <ul>
               <li><a href="https://github.com/ankurk91/vue-bootstrap-datetimepicker" target="_blank">Github</a></li>
+              <li><a href="https://www.npmjs.com/package/vue-bootstrap-datetimepicker" target="_blank">npm</a></li>
               <li><a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank">
                 Bootstrap datetime picker
               </a></li>
               <li><a
                 href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en"
-                rel="noreferrer" target="_blank">Vue.js Dev tools</a></li>
+                target="_blank">Vue.js Dev tools</a>
+              </li>
               <li><a href="https://github.com/logaretm/vee-validate" target="_blank">vee-validate</a></li>
             </ul>
           </div>
@@ -145,7 +147,7 @@
       datePicker
     },
     methods: {
-      submit () {
+      submit() {
         console.log('Form submit event');
         console.log(this.form);
         // http://vee-validate.logaretm.com/examples.html#component-example
@@ -154,7 +156,7 @@
           alert(`Validation Result: ${result}`);
         });
       },
-      setNewValue(){
+      setNewValue() {
         // https://momentjs.com/docs/#/manipulating/
         this.form.date = moment().add(7, 'days');
       }
