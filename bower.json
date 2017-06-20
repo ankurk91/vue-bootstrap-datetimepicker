@@ -1,0 +1,31 @@
+{
+  "name": "vue-bootstrap-datetimepicker",
+  "description": "Vue.js component for bootstrap-datetimepicker",
+  "main": "dist/vue-bootstrap-datetimepicker.min.js",
+  "moduleType": "globals",
+  "authors": [
+    "ankurk91"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "bootstrap-datetimepicker",
+    "vue-bootstrap-datetimepicker",
+    "datepicker"
+  ],
+  "homepage": "https://github.com/ankurk91/vue-bootstrap-datetimepicker",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".github",
+    "examples",
+    "docs"
+  ],
+  "dependencies": {
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "vue": "^2.0.0"
+  }
+}

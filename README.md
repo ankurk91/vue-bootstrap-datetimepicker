@@ -85,7 +85,6 @@ npm run dev
 
 ### todo
 * Inline mode
-* Publish on bower
 * Date range example
 
 ### License
