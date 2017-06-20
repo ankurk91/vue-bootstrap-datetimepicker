@@ -12,7 +12,7 @@
 </template>
 
 <script type="text/javascript">
-  window.$ = window.jQuery = require('jquery');
+  window.jQuery = require('jquery');
   import 'eonasdan-bootstrap-datetimepicker';
 
   export default {
@@ -58,31 +58,29 @@
     },
     data () {
       return {
-        control: null,
+        dp: null,
       };
     },
     mounted () {
       // Return early if date-picker is already loaded
-      if (this.control) return;
+      if (this.dp) return;
       // Handle wrapped input
       let elem = this.wrap ? this.$el.parentNode : this.$el;
       // Cache DOM
       let $elem = jQuery(elem);
       // Init date-picker
       $elem.datetimepicker(this.config);
-      // Store data control
-      this.control = $elem.data('DateTimePicker');
+      // Store data dp
+      this.dp = $elem.data('DateTimePicker');
       // Set initial value
-      this.control.date(this.value);
+      this.dp.date(this.value);
       // Watch for changes
-      $elem.on('dp.change', (event) => {
-        this.$emit('input', event.date);
-      });
+      $elem.on('dp.change', this.onChange);
     },
     beforeDestroy () {
       // Free up memory
-      if (this.control) {
-        this.control.destroy();
+      if (this.dp) {
+        this.dp.destroy();
       }
     },
     watch: {
@@ -91,7 +89,17 @@
        * @param newValue
        */
       value(newValue){
-        this.control && this.control.date(newValue)
+        this.dp && this.dp.date(newValue)
+      }
+    },
+    methods: {
+      /**
+       * Update v-model upon change triggered by date-picker itself
+       *
+       * @param event
+       */
+      onChange(event){
+        this.$emit('input', event.date);
       }
     }
   };

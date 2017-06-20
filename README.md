@@ -17,10 +17,10 @@ yarn add vue-bootstrap-datetimepicker
 ```
 
 ## Requirements
-* Vue.js 2.x
-* Bootstrap 3
-* jQuery
-* Moment.js
+* Vue.js ^2.0.0
+* Bootstrap ^3.3.7 (optional if you include standalone css)
+* jQuery  >=1.8.3
+* Moment.js  ^2.10
     
 ## Example
 ```html
