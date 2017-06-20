@@ -1,4 +1,4 @@
-import component from './datetime-picker.vue';
+import component from './DatetimePicker.vue';
 
 export default component;
 export {component};
