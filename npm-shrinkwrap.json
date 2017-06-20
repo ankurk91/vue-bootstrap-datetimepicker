@@ -1,6 +1,6 @@
 {
   "name": "vue-bootstrap-datetimepicker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "abbrev": {
       "version": "1.1.0",
@@ -539,8 +539,7 @@
     "bootstrap": {
       "version": "3.3.7",
       "from": "bootstrap@latest",
-      "resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.7.tgz",
-      "dev": true
+      "resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.7.tgz"
     },
     "brace-expansion": {
       "version": "1.1.7",
@@ -1181,8 +1180,7 @@
     "eonasdan-bootstrap-datetimepicker": {
       "version": "4.17.47",
       "from": "eonasdan-bootstrap-datetimepicker@>=4.17.47 <5.0.0",
-      "resolved": "https://registry.npmjs.org/eonasdan-bootstrap-datetimepicker/-/eonasdan-bootstrap-datetimepicker-4.17.47.tgz",
-      "dev": true
+      "resolved": "https://registry.npmjs.org/eonasdan-bootstrap-datetimepicker/-/eonasdan-bootstrap-datetimepicker-4.17.47.tgz"
     },
     "errno": {
       "version": "0.1.4",
@@ -1827,8 +1825,7 @@
     "jquery": {
       "version": "3.2.1",
       "from": "jquery@latest",
-      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.2.1.tgz",
-      "dev": true
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.2.1.tgz"
     },
     "js-base64": {
       "version": "2.1.9",
@@ -2093,14 +2090,12 @@
     "moment": {
       "version": "2.18.1",
       "from": "moment@>=2.10.0 <3.0.0",
-      "resolved": "https://registry.npmjs.org/moment/-/moment-2.18.1.tgz",
-      "dev": true
+      "resolved": "https://registry.npmjs.org/moment/-/moment-2.18.1.tgz"
     },
     "moment-timezone": {
       "version": "0.4.1",
       "from": "moment-timezone@>=0.4.0 <0.5.0",
-      "resolved": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.4.1.tgz",
-      "dev": true
+      "resolved": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.4.1.tgz"
     },
     "ms": {
       "version": "2.0.0",
