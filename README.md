@@ -63,6 +63,40 @@ yarn add vue-bootstrap-datetimepicker
 </script>
 ```
 
+## Install in non-module environments (without webpack)
+* Acquire required files
+```html
+<!-- Date-picker dependency-->
+<script src="jquery.min.js"></script>
+<script src="moment.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<link href="bootstrap.min.css" rel="stylesheet">
+<!-- Date-picker itself -->
+<script src="bootstrap-datetimepicker.min.js"></script>
+<link href="bootstrap-datetimepicker.min.css" rel="stylesheet">
+<!-- Vue js -->
+<script src="vue.min.js"></script>
+<!-- Lastly add this package -->
+<script src="https://unpkg.com/vue-bootstrap-datetimepicker"></script>
+```
+* Use the component anywhere in your app like this
+```html
+<main id="app">  
+    <date-picker v-model="date"></date-picker> 
+</main>
+<script>
+  //Initialize as global component
+  Vue.component('date-picker', VueBootstrapDatetimePicker.default);
+  
+  new Vue({
+    el: '#app',
+    data: {
+      date: null
+    },    
+  });
+</script>
+```
+
 ## Props
 The component accepts these props
 
