@@ -54,7 +54,7 @@
 
           <div class="form-group">
             <label>Works in modals as well </label>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#date-modal">Open in
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#date-modal">Open in
               modal
             </button>
           </div>
@@ -62,6 +62,21 @@
           <div class="form-group">
             <label>Select date (localization)</label>
             <date-picker :config="configs.locale" v-model="form.dateLocale"></date-picker>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Start date</label>
+                <date-picker v-model="form.startDate" :config="configs.range" ref="startDate"></date-picker>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>End date</label>
+                <date-picker v-model="form.endDate" :config="configs.range" ref="endDate"></date-picker>
+              </div>
+            </div>
           </div>
 
           <hr>
@@ -135,6 +150,8 @@
           dateValidate: null,
           time: null,
           dateLocale: null,
+          startDate: null,
+          endDate: null
         },
         configs: {
           basic: {
@@ -147,6 +164,10 @@
           },
           locale: {
             locale: 'hi',
+          },
+          range: {
+            format: 'DD/MM/YYYY',
+            useCurrent: false
           }
         },
       }
@@ -175,6 +196,22 @@
           viewMode: 'years'
         }
       }
+    },
+    mounted() {
+      // Linked Pickers example
+      // Don't forget to remove on beforeDestroy
+      let $startDate = $(this.$refs.startDate.$el);
+      let $endDate = $(this.$refs.endDate.$el);
+
+      $startDate.on('dp.change', (e) => {
+        console.log('start dp.change', e);
+        $endDate.data('DateTimePicker').minDate(e.date);
+      });
+
+      $endDate.on('dp.change', (e) => {
+        console.log('end dp.change', e);
+        $startDate.data('DateTimePicker').maxDate(e.date);
+      });
     }
   }
 </script>

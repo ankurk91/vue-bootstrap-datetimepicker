@@ -128,7 +128,6 @@ npm run dev
 
 ### todo
 * Inline mode
-* Date range example with two inputs
 * Update to webpack v3.0
 
 ### License
