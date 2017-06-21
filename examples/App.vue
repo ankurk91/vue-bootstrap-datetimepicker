@@ -5,7 +5,13 @@
       <div class="col-md-8">
         <form method="post" action="/" @submit.prevent="submit()">
 
-          <button class="btn btn-default" @click.prevent="setNewValue()">Set new value</button>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-default" @click.prevent="setNewValue()">Set new value pragmatically</button>
+              <button class="btn btn-default" @click.prevent="updateConfig()">Reactive configs (Change viewMode)
+              </button>
+            </div>
+          </div>
 
           <div class="form-group">
             <label>Select date (basic)</label>
@@ -121,7 +127,7 @@
 
   export default {
     name: 'app',
-    data (){
+    data() {
       return {
         form: {
           date: new Date(),
@@ -132,13 +138,15 @@
         },
         configs: {
           basic: {
+            // https://momentjs.com/docs/#/displaying/format/
             format: 'DD/MM/YYYY'
           },
           timePicker: {
-            format: 'LT'
+            format: 'LT',
+            useCurrent: false
           },
           locale: {
-            locale: 'hi'
+            locale: 'hi',
           }
         },
       }
@@ -157,8 +165,15 @@
         });
       },
       setNewValue() {
+        console.log('Set new value');
         // https://momentjs.com/docs/#/manipulating/
         this.form.date = moment().add(7, 'days');
+      },
+      updateConfig() {
+        console.log('Update config');
+        this.configs.basic = {
+          viewMode: 'years'
+        }
       }
     }
   }

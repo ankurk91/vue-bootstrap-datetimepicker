@@ -19,7 +19,7 @@
     props: {
       value: {
         // Don't validate
-        value: null,
+        default: null,
         required: true
       },
       // http://eonasdan.github.io/bootstrap-datetimepicker/Options/
@@ -90,6 +90,13 @@
        */
       value(newValue){
         this.dp && this.dp.date(newValue)
+      },
+      /**
+       * Watch for any change in options and set them
+       * @param newConfig
+       */
+      config(newConfig){
+        this.dp && this.dp.options(Object.assign(this.dp.options(), newConfig));
       }
     },
     methods: {

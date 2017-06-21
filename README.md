@@ -16,6 +16,15 @@ npm install vue-bootstrap-datetimepicker --save
 yarn add vue-bootstrap-datetimepicker
 ```
 
+## Features
+* Reactive ``v-model`` value
+    - You can change datepicker value programmatically 
+* Reactive [config](http://eonasdan.github.io/bootstrap-datetimepicker/Options/) options
+    - You can change config options dynamically
+    - Component will watch for any changes and apply them
+* Play nice with [vee-validate](https://github.com/logaretm/vee-validate) validation library
+
+
 ## Requirements
 * Vue.js ^2.0.0
 * Bootstrap ^3.3.7 (optional if you include standalone css)
@@ -85,7 +94,8 @@ npm run dev
 
 ### todo
 * Inline mode
-* Date range example
+* Date range example with two inputs
+* Update to webpack v3.0
 
 ### License
 [MIT](LICENSE.txt) License
