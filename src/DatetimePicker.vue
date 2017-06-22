@@ -12,15 +12,21 @@
 </template>
 
 <script type="text/javascript">
-  window.jQuery = require('jquery');
+  import jQuery from "jquery";
+  window.$ = window.jQuery = jQuery;
+  import moment from "moment";
+  window.moment = moment;
+
   import 'eonasdan-bootstrap-datetimepicker';
 
   export default {
     props: {
       value: {
-        // Don't validate
         default: null,
-        required: true
+        required: true,
+        validator: function (val) {
+          return val === null || val instanceof Date || typeof val === 'string' || val instanceof moment
+        }
       },
       // http://eonasdan.github.io/bootstrap-datetimepicker/Options/
       config: {
@@ -88,14 +94,14 @@
        * Listen to change from outside of component and update DOM
        * @param newValue
        */
-      value(newValue){
+      value (newValue) {
         this.dp && this.dp.date(newValue)
       },
       /**
        * Watch for any change in options and set them
        * @param newConfig
        */
-      config(newConfig){
+      config (newConfig) {
         this.dp && this.dp.options(Object.assign(this.dp.options(), newConfig));
       }
     },
@@ -105,7 +111,7 @@
        *
        * @param event
        */
-      onChange(event){
+      onChange (event) {
         this.$emit('input', event.date);
       }
     }
