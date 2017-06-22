@@ -11,7 +11,8 @@
     "vue",
     "bootstrap-datetimepicker",
     "vue-bootstrap-datetimepicker",
-    "datepicker"
+    "datepicker",
+    "timepicker"
   ],
   "homepage": "https://github.com/ankurk91/vue-bootstrap-datetimepicker",
   "ignore": [

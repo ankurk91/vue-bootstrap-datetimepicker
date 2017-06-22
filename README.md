@@ -27,9 +27,9 @@ yarn add vue-bootstrap-datetimepicker
 
 ## Requirements
 * Vue.js ^2.0.0
-* Bootstrap ^3.3.7 (optional if you include standalone css)
-* jQuery  >=1.8.3
-* Moment.js  ^2.10
+* Bootstrap ^3.3.7 
+* jQuery >=1.8.3
+* Moment.js ^2.10
     
 ## Example
 ```html
@@ -41,8 +41,8 @@ yarn add vue-bootstrap-datetimepicker
 
 <script>
   // Import required dependencies
-  import 'moment';
-  window.$ = window.jQuery = require('jquery');
+  import moment from 'moment';
+  import jQuery from "jquery";
   import 'bootstrap';
   import datePicker from 'vue-bootstrap-datetimepicker';
   // You have to add CSS yourself
@@ -102,7 +102,7 @@ The component accepts these props
 
 | Attribute    | Required   | Type               | Description      |
 | :---         |  :---:     | :---:              | :---            |
-| v-model      |  Yes       | String / Date Object / [moment](https://momentjs.com/)/ null | Set or Get date-picker value |
+| v-model      |  Yes       | String / Date Object / [moment](https://momentjs.com/) / null | Set or Get date-picker value |
 | config       |  No        | Object             | Datetime picker configuration [options](http://eonasdan.github.io/bootstrap-datetimepicker/Options/)|
 | placeholder  |  No        | String             | Set placeholder on input |
 | input-class  |  No        | String / Object    | Add CSS class to input  |
