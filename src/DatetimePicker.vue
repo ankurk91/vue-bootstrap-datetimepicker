@@ -18,14 +18,15 @@
   window.moment = moment;
 
   import 'eonasdan-bootstrap-datetimepicker';
+  // You have to add css yourself
 
   export default {
     props: {
       value: {
         default: null,
         required: true,
-        validator: function (val) {
-          return val === null || val instanceof Date || typeof val === 'string' || val instanceof moment
+        validator (value) {
+          return value === null || value instanceof Date || typeof value === 'string' || value instanceof moment
         }
       },
       // http://eonasdan.github.io/bootstrap-datetimepicker/Options/
@@ -92,6 +93,7 @@
     watch: {
       /**
        * Listen to change from outside of component and update DOM
+       *
        * @param newValue
        */
       value (newValue) {
@@ -99,7 +101,8 @@
       },
       /**
        * Watch for any change in options and set them
-       * @param newConfig
+       *
+       * @param newConfig Object
        */
       config (newConfig) {
         this.dp && this.dp.options(Object.assign(this.dp.options(), newConfig));

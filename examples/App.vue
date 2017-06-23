@@ -199,7 +199,7 @@
     },
     mounted() {
       // Linked Pickers example
-      // Don't forget to remove on beforeDestroy
+      // Don't forget to remove events on beforeDestroy
       let $startDate = $(this.$refs.startDate.$el);
       let $endDate = $(this.$refs.endDate.$el);
 
