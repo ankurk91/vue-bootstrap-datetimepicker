@@ -13,9 +13,7 @@
 
 <script type="text/javascript">
   import jQuery from "jquery";
-  window.$ = window.jQuery = jQuery;
   import moment from "moment";
-  window.moment = moment;
 
   import 'eonasdan-bootstrap-datetimepicker';
   // You have to add css yourself
@@ -26,7 +24,7 @@
         default: null,
         required: true,
         validator (value) {
-          return value === null || value instanceof Date || typeof value === 'string' || value instanceof moment
+          return value === null || value instanceof Date || typeof value === 'string' || value instanceof String || value instanceof moment
         }
       },
       // http://eonasdan.github.io/bootstrap-datetimepicker/Options/
@@ -36,7 +34,7 @@
       },
       placeholder: {
         type: String,
-        default: 'Pick a date'
+        default: ''
       },
       inputClass: {
         type: [String, Object],
@@ -77,7 +75,7 @@
       let $elem = jQuery(elem);
       // Init date-picker
       $elem.datetimepicker(this.config);
-      // Store data dp
+      // Store data control
       this.dp = $elem.data('DateTimePicker');
       // Set initial value
       this.dp.date(this.value);

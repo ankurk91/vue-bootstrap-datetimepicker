@@ -3,15 +3,17 @@
     <h1 class="page-header">Vue.js bootstrap datetime picker examples</h1>
     <div class="row">
       <div class="col-md-8">
-        <form method="post" action="/" @submit.prevent="submit()">
 
-          <div class="row">
-            <div class="col-md-12">
-              <button class="btn btn-default" @click.prevent="setNewValue()">Set new value pragmatically</button>
-              <button class="btn btn-default" @click.prevent="updateConfig()">Reactive configs (Change viewMode)
-              </button>
-            </div>
+        <div class="row">
+          <div class="col-md-12">
+            <button class="btn btn-default" @click.prevent="setNewValue()">Set new value pragmatically</button>
+            <button class="btn btn-default" @click.prevent="updateConfig()">Reactive configs (Change viewMode)
+
+            </button>
           </div>
+        </div>
+
+        <form method="post" action="/" @submit.prevent="submit()">
 
           <div class="form-group">
             <label>Select date (basic)</label>
@@ -22,7 +24,7 @@
             <label>Select date time (wrap)</label>
             <div class="input-group date">
               <date-picker v-model="form.date"
-                           :wrap="true">
+                           :wrap="true" :config="{allowInputToggle:true}">
               </date-picker>
               <div class="input-group-addon">
                 <span class="glyphicon glyphicon-calendar"></span>
@@ -56,6 +58,7 @@
             <label>Works in modals as well </label>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#date-modal">Open in
               modal
+
             </button>
           </div>
 
@@ -137,7 +140,7 @@
 
 <script type="text/javascript">
   import datePicker from '../src/index';
-  import 'moment';
+  import moment from 'moment';
   import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css';
 
   export default {

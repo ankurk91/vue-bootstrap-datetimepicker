@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.0
+* Validate v-model
+
 ## 1.1.0
 * Reactive configs 
 
