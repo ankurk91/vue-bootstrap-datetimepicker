@@ -1,6 +1,6 @@
 {
   "name": "vue-bootstrap-datetimepicker",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Vue.js component for bootstrap-datetimepicker",
   "main": "dist/vue-bootstrap-datetimepicker.min.js",
   "module": "src/index.js",

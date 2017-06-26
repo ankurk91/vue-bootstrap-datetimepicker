@@ -1,6 +1,6 @@
 # Changelog
 
-## Next version
+## 2.0.0 (breaking)
 - Rename `input-name` prop to `name`
 
 ## 1.2.0
