@@ -106,7 +106,7 @@ The component accepts these props
 | config       |  No        | Object             | Datetime picker configuration [options](http://eonasdan.github.io/bootstrap-datetimepicker/Options/)|
 | placeholder  |  No        | String             | Set placeholder on input |
 | input-class  |  No        | String / Object    | Add CSS class to input  |
-| input-name   |  No        | String             | Set input field name  |
+| name         |  No        | String             | Set input field name  |
 | required     |  No        | Boolean            | Make input field required |
 | read-only    |  No        | Boolean            | Make input field read-only |
 | disabled     |  No        | Boolean            | Make input field disabled |

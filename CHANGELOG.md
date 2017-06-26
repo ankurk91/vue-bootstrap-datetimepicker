@@ -1,7 +1,10 @@
 # Changelog
 
+## Next version
+- Rename `input-name` prop to `name`
+
 ## 1.2.0
-* Validate v-model
+* Add validation on `value` prop
 
 ## 1.1.0
 * Reactive configs 

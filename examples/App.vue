@@ -46,7 +46,7 @@
           <div class="form-group" :class="{'has-error' : errors.has('date-of-purchase')}">
             <label>Select date (vee-validate)</label>
             <date-picker v-model="form.dateValidate"
-                         data-vv-name="date-of-purchase"
+                         name="date-of-purchase"
                          v-validate="{required:true}"
                          placeholder="Date of purchase"
             ></date-picker>
