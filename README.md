@@ -44,12 +44,12 @@ yarn add vue-bootstrap-datetimepicker
   import moment from 'moment';
   import jQuery from "jquery";
   import 'bootstrap';
-  import datePicker from 'vue-bootstrap-datetimepicker';
-  // You have to add CSS yourself
-  import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css';
-  // Bootstrap css  
   import 'bootstrap/dist/css/bootstrap.css';
+  import datePicker from 'vue-bootstrap-datetimepicker';
   
+  // You have to add date-picker CSS yourself
+  import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css';
+   
   export default {    
     data () {
       return {
@@ -100,17 +100,17 @@ yarn add vue-bootstrap-datetimepicker
 ## Props
 The component accepts these props
 
-| Attribute    | Required   | Type               | Description      |
-| :---         |  :---:     | :---:              | :---            |
-| v-model      |  Yes       | String / Date Object / [moment](https://momentjs.com/) / null | Set or Get date-picker value |
-| config       |  No        | Object             | Datetime picker configuration [options](http://eonasdan.github.io/bootstrap-datetimepicker/Options/)|
-| placeholder  |  No        | String             | Set placeholder on input |
-| input-class  |  No        | String / Object    | Add CSS class to input  |
-| name         |  No        | String             | Set input field name  |
-| required     |  No        | Boolean            | Make input field required |
-| read-only    |  No        | Boolean            | Make input field read-only |
-| disabled     |  No        | Boolean            | Make input field disabled |
-| wrap         |  No        | Boolean            | Set this to true when wrapped in 'input-group' |
+| Attribute       | Type               | Default               | Description      |
+| :---            |  :---:             | :---:                 | :---             |
+| v-model / value | String / Date Object / [moment](https://momentjs.com/) / null | `null` | Set or Get date-picker value |
+| config          | Object             | `{}` | Datetime picker configuration [options](http://eonasdan.github.io/bootstrap-datetimepicker/Options/)|
+| placeholder     | String             | `''` | Set placeholder on input |
+| input-class     | String / Object    | `''` | Add CSS class to input  |
+| name            | String             | `datetime` | Set input field name  |
+| required        | Boolean            | `false` | Make input field required |
+| read-only       | Boolean            | `false` | Make input field read-only |
+| disabled        | Boolean            | `false` | Make input field disabled |
+| wrap            | Boolean            | `false` | Set this to true when wrapped in 'input-group' |
 
 
 ### Run examples on your localhost
@@ -127,8 +127,8 @@ npm run dev
 * This should open the demo page at ``http://localhost:8080``
 
 ### todo
-* Inline mode
-* Update to webpack v3.0
+* Inline mode, who use it ?
+* Update to webpack v3.0 when stable
 
 ### License
 [MIT](LICENSE.txt) License
