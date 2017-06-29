@@ -45,6 +45,8 @@ yarn add vue-bootstrap-datetimepicker
   import jQuery from "jquery";
   import 'bootstrap';
   import 'bootstrap/dist/css/bootstrap.css';
+  
+  // Import this component
   import datePicker from 'vue-bootstrap-datetimepicker';
   
   // You have to add date-picker CSS yourself
