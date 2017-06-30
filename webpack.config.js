@@ -24,6 +24,7 @@ module.exports = {
     'moment',
     'moment-timezone',
     'eonasdan-bootstrap-datetimepicker',
+    'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css'
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),// where to store build files
