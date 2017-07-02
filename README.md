@@ -49,7 +49,7 @@ yarn add vue-bootstrap-datetimepicker
   // Import this component
   import datePicker from 'vue-bootstrap-datetimepicker';
   
-  // You have to add date-picker CSS yourself
+  // Import date picker css
   import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css';
    
   export default {    
@@ -129,8 +129,7 @@ npm run dev
 * This should open the demo page at ``http://localhost:8080``
 
 ### todo
-* Inline mode, who use it ?
-* Update to webpack v3.0 when stable
+* Inline mode, who uses it ?
 
 ### License
 [MIT](LICENSE.txt) License
