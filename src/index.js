@@ -1,6 +1,6 @@
 import component from './DatetimePicker.vue';
 
-const plugin = {
+const DatetimePickerPlugin = {
   install: (Vue, options) => {
     Vue.component('date-picker', component);
     require('eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css');
@@ -8,4 +8,4 @@ const plugin = {
 };
 
 export default component;
-export {component, plugin};
+export {component, DatetimePickerPlugin};
