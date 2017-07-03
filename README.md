@@ -1,18 +1,19 @@
 # Vue-Bootstrap-DatetimePicker
 
-> Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](https://github.com/Eonasdan/bootstrap-datetimepicker/)
-
-[![vue-js](https://img.shields.io/badge/vue.js-2.x-brightgreen.svg?maxAge=604800)](https://github.com/ankurk91/vue-bootstrap-datetimepicker/)
+[![vue-js](https://img.shields.io/badge/vue.js-2.x-brightgreen.svg?maxAge=604800)](https://vuejs.org/)
 [![downloads](https://img.shields.io/npm/dt/vue-bootstrap-datetimepicker.svg)](https://www.npmjs.com/package/vue-bootstrap-datetimepicker)
 [![npm-version](https://img.shields.io/npm/v/vue-bootstrap-datetimepicker.svg)](https://www.npmjs.com/package/vue-bootstrap-datetimepicker)
 [![github-tag](https://img.shields.io/github/tag/ankurk91/vue-bootstrap-datetimepicker.svg?maxAge=1800)](https://github.com/ankurk91/vue-bootstrap-datetimepicker/)
 [![license](https://img.shields.io/github/license/ankurk91/vue-bootstrap-datetimepicker.svg?maxAge=1800)]()
 
+Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](https://github.com/Eonasdan/bootstrap-datetimepicker/)
 
 ## Installation
 ```bash
+# npm
 npm install vue-bootstrap-datetimepicker --save
-# OR
+
+# Yarn
 yarn add vue-bootstrap-datetimepicker
 ```
 
@@ -29,9 +30,9 @@ yarn add vue-bootstrap-datetimepicker
 * Vue.js ^2.0.0
 * Bootstrap ^3.3.7 
 * jQuery >=1.8.3
-* Moment.js ^2.10
+* [Moment.js](https://momentjs.com/) ^2.10
     
-## Example
+## Usage
 ```html
 <template>
   <div>
@@ -64,6 +65,22 @@ yarn add vue-bootstrap-datetimepicker
   }
 </script>
 ```
+
+## Available props
+The component accepts these props:
+
+| Attribute       | Type               | Default               | Description      |
+| :---            |  :---:             | :---:                 | :---             |
+| v-model / value | String / Date Object / [moment](https://momentjs.com/) / null | `null` | Set or Get date-picker value |
+| config          | Object             | `{}` | Datetime picker configuration [options](http://eonasdan.github.io/bootstrap-datetimepicker/Options/)|
+| placeholder     | String             | `''` | Set placeholder on input |
+| input-class     | String / Object    | `''` | Add CSS class to input  |
+| name            | String             | `datetime` | Set input field name  |
+| required        | Boolean            | `false` | Make input field required |
+| read-only       | Boolean            | `false` | Make input field read-only |
+| disabled        | Boolean            | `false` | Make input field disabled |
+| wrap            | Boolean            | `false` | Set this to true when wrapped in 'input-group' |
+
 
 ## Install in non-module environments (without webpack)
 * Acquire required files
@@ -99,23 +116,7 @@ yarn add vue-bootstrap-datetimepicker
 </script>
 ```
 
-## Props
-The component accepts these props
-
-| Attribute       | Type               | Default               | Description      |
-| :---            |  :---:             | :---:                 | :---             |
-| v-model / value | String / Date Object / [moment](https://momentjs.com/) / null | `null` | Set or Get date-picker value |
-| config          | Object             | `{}` | Datetime picker configuration [options](http://eonasdan.github.io/bootstrap-datetimepicker/Options/)|
-| placeholder     | String             | `''` | Set placeholder on input |
-| input-class     | String / Object    | `''` | Add CSS class to input  |
-| name            | String             | `datetime` | Set input field name  |
-| required        | Boolean            | `false` | Make input field required |
-| read-only       | Boolean            | `false` | Make input field read-only |
-| disabled        | Boolean            | `false` | Make input field disabled |
-| wrap            | Boolean            | `false` | Set this to true when wrapped in 'input-group' |
-
-
-### Run examples on your localhost
+## Run examples on your localhost
 * Clone this repo
 * Make sure you have node-js >=6.10 and npm >=4.6.1
 * Install dependencies
@@ -128,8 +129,11 @@ npm run dev
 ``
 * This should open the demo page at ``http://localhost:8080``
 
-### todo
+## todo
 * Inline mode, who uses it ?
 
-### License
+## Changelog
+Changelog for each release can found [here](CHANGELOG.md)
+
+## License
 [MIT](LICENSE.txt) License
