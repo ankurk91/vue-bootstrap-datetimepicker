@@ -166,6 +166,7 @@
             useCurrent: false
           },
           locale: {
+            // https://github.com/moment/moment/tree/develop/locale
             locale: 'hi',
           },
           range: {

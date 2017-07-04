@@ -1,7 +1,7 @@
 # Changelog
 
-## [2.1.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/1.2.0...2.1.0) (unreleased)
-* Expose `install` method
+## [2.1.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/1.2.0...2.1.0) 
+* Expose `install` method, so that now you can use this package as a [plugin](https://vuejs.org/v2/guide/plugins.html)
 
 ## [2.0.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/1.2.0...2.0.0) (breaking)
 - Rename `input-name` prop to `name`

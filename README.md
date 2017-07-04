@@ -66,6 +66,14 @@ yarn add vue-bootstrap-datetimepicker
 </script>
 ```
 
+#### As plugin
+```js
+  import Vue from 'vue';
+  import {DatetimePickerPlugin} from 'vue-bootstrap-datetimepicker';  
+  Vue.use(DatetimePickerPlugin);
+```
+This will register a global component `<date-picker>` and also import required css file.
+
 ## Available props
 The component accepts these props:
 

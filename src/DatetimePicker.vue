@@ -16,7 +16,7 @@
   import moment from "moment";
 
   import 'eonasdan-bootstrap-datetimepicker';
-  // You have to add css yourself
+  // You have to import css yourself
 
   export default {
     props: {
@@ -56,6 +56,9 @@
         type: Boolean,
         default: false
       },
+      /**
+       * You can to set this to true when component is wrapped in input-group
+       */
       wrap: {
         type: Boolean,
         default: false
