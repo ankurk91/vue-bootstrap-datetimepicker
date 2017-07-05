@@ -1,9 +1,12 @@
 # Changelog
 
-## [2.2.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.0.0...2.1.0)
+## [2.3.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.2.0...2.3.0) (unreleased)
+- New way to use as plugin, old is deprecated
+ 
+## [2.2.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.1.0...2.2.0)
 - Rollback importing css, component is no longer importing any css
     - This also applies when using this package as plugin `Vue.use()`
-
+ 
 ## [2.1.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.0.0...2.1.0) 
 * Expose `install` method, so that now you can use this package as a [plugin](https://vuejs.org/v2/guide/plugins.html)
 

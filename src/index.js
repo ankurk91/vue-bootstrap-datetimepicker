@@ -6,5 +6,7 @@ const DatetimePickerPlugin = {
   }
 };
 
+component.install = DatetimePickerPlugin.install;
+
 export default component;
 export {component, DatetimePickerPlugin};

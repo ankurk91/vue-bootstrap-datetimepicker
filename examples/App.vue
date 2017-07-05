@@ -139,6 +139,8 @@
 </template>
 
 <script type="text/javascript">
+  import Vue from 'vue';
+
   import datePicker from '../src/index';
   import moment from 'moment';
   import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css';
