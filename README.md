@@ -89,7 +89,7 @@ The component accepts these props:
 | read-only       | Boolean            | `false` | Make input field read-only |
 | disabled        | Boolean            | `false` | Make input field disabled |
 | wrap            | Boolean            | `false` | Set this to true when wrapped in 'input-group' |
-
+| id              | String             | `''` | Set input field id |
 
 ## Install in non-module environments (without webpack)
 * Acquire required files

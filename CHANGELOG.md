@@ -2,6 +2,7 @@
 
 ## [2.3.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.2.0...2.3.0) (unreleased)
 - New way to use as plugin, old is deprecated
+- Add `id` prop
  
 ## [2.2.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.1.0...2.2.0)
 - Rollback importing css, component is no longer importing any css

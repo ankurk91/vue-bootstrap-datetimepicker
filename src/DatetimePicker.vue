@@ -3,6 +3,7 @@
   <input type="text"
          class="form-control input"
          :class="inputClass"
+         :id="id"
          :name="name"
          :placeholder="placeholder"
          :required="required"
@@ -62,7 +63,10 @@
       wrap: {
         type: Boolean,
         default: false
-      }
+      },
+      id: {
+        type: String
+      },
     },
     data () {
       return {

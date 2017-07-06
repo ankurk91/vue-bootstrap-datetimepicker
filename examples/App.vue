@@ -21,9 +21,9 @@
           </div>
 
           <div class="form-group">
-            <label>Select date time (wrap)</label>
+            <label for="date-time-input">Select date time (wrap)</label>
             <div class="input-group date">
-              <date-picker v-model="form.date"
+              <date-picker v-model="form.date" id="date-time-input"
                            :wrap="true" :config="{allowInputToggle:true}">
               </date-picker>
               <div class="input-group-addon">
