@@ -33,7 +33,7 @@ yarn add vue-bootstrap-datetimepicker
 * [Moment.js](https://momentjs.com/) ^2.10
     
 ## Usage
-```vue
+```html
 <template>
   <div>
     <date-picker v-model="date"></date-picker>
