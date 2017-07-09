@@ -93,6 +93,7 @@
       // Free up memory
       if (this.dp) {
         this.dp.destroy();
+        this.dp = null;
       }
     },
     watch: {
