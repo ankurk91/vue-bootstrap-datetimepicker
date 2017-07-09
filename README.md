@@ -6,7 +6,7 @@
 [![github-tag](https://img.shields.io/github/tag/ankurk91/vue-bootstrap-datetimepicker.svg?maxAge=1800)](https://github.com/ankurk91/vue-bootstrap-datetimepicker/)
 [![license](https://img.shields.io/github/license/ankurk91/vue-bootstrap-datetimepicker.svg?maxAge=1800)]()
 
-Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](https://github.com/Eonasdan/bootstrap-datetimepicker/)
+Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.github.io/bootstrap-datetimepicker/)
 
 ## Installation
 ```bash
@@ -22,7 +22,7 @@ yarn add vue-bootstrap-datetimepicker
     - You can change datepicker value programmatically 
 * Reactive [config](http://eonasdan.github.io/bootstrap-datetimepicker/Options/) options
     - You can change config options dynamically
-    - Component will watch for any changes and apply them
+    - Component will watch for changes and apply them
 * Play nice with [vee-validate](https://github.com/logaretm/vee-validate) validation library
 
 
@@ -33,7 +33,7 @@ yarn add vue-bootstrap-datetimepicker
 * [Moment.js](https://momentjs.com/) ^2.10
     
 ## Usage
-```html
+```vue
 <template>
   <div>
     <date-picker v-model="date"></date-picker>
@@ -69,9 +69,9 @@ yarn add vue-bootstrap-datetimepicker
 #### As plugin
 ```js
   import Vue from 'vue';
-  import {DatetimePickerPlugin} from 'vue-bootstrap-datetimepicker';
+  import datePicker from 'vue-bootstrap-datetimepicker';
   import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css';
-  Vue.use(DatetimePickerPlugin);
+  Vue.use(datePicker);
 ```
 This will register a global component `<date-picker>` 
 
@@ -109,9 +109,10 @@ The component accepts these props:
 ```
 * Use the component anywhere in your app like this
 ```html
-<main id="app">  
+<!-- index.html -->
+<div id="app">  
     <date-picker v-model="date"></date-picker> 
-</main>
+</div>
 <script>
   //Initialize as global component
   Vue.component('date-picker', VueBootstrapDatetimePicker.default);

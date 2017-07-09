@@ -1,6 +1,18 @@
 <template>
   <section class="container">
-    <h1 class="page-header">Vue.js bootstrap datetime picker examples</h1>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Vue.js datetime picker Demo</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://www.npmjs.com/package/vue-bootstrap-datetimepicker" target="_blank"> npm</a></li>
+          <li><a href="https://github.com/ankurk91/vue-bootstrap-datetimepicker" target="_blank"> Github</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="row">
       <div class="col-md-8">
 
@@ -8,7 +20,6 @@
           <div class="col-md-12">
             <button class="btn btn-default" @click.prevent="setNewValue()">Set new value pragmatically</button>
             <button class="btn btn-default" @click.prevent="updateConfig()">Reactive configs (Change viewMode)
-
             </button>
           </div>
         </div>
@@ -59,6 +70,7 @@
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#date-modal">Open in
               modal
 
+
             </button>
           </div>
 
@@ -83,7 +95,10 @@
           </div>
 
           <hr>
-          <button class="btn btn-primary" type="submit">Validate form</button>
+
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-ok"></i> Validate form</button>
+          </div>
 
         </form>
       </div>
