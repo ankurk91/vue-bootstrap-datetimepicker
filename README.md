@@ -143,7 +143,7 @@ npm run dev
 * Inline mode, who uses it ?
 
 ## Changelog
-Changelog for each release can found [here](CHANGELOG.md)
+Changelog for each release can be found [here](CHANGELOG.md)
 
 ## License
 [MIT](LICENSE.txt) License

@@ -1,7 +1,10 @@
 # Changelog
 
+## [2.4.1](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.4.0...2.4.1)
+- Fix: set `dp` to `null` upon destroy
+
 ## [2.4.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.3.0...2.4.0)
-- Fix UglifyJS issue 
+- Fix: UglifyJS issue 
 
 ## [2.3.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.2.0...2.3.0) 
 - New way to use as plugin, old is deprecated, see updated [example](https://github.com/ankurk91/vue-bootstrap-datetimepicker#as-plugin)
