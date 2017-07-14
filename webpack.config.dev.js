@@ -71,6 +71,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       Vue: 'vue',
       jQuery: 'jquery',
+      $: 'jquery',
       moment: 'moment',
     }),
     new webpack.optimize.CommonsChunkPlugin('vendor'),

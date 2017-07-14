@@ -169,7 +169,7 @@
           dateModal: moment(),
           dateValidate: null,
           time: null,
-          dateLocale: null,
+          dateLocale: moment(),
           startDate: null,
           endDate: null
         },

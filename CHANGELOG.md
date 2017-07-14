@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.4.3](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.4.2...2.4.3)
+- Fix: stopped working in non module environment, [#1](https://github.com/ankurk91/vue-bootstrap-datetimepicker/issues/1)
+
 ## [2.4.1](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.4.0...2.4.1)
 - Fix: set `dp` to `null` upon destroy
 

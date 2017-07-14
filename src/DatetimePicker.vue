@@ -13,8 +13,8 @@
 </template>
 
 <script type="text/javascript">
-  import jQuery from "jquery";
-  import moment from "moment";
+  const jQuery = window.jQuery || require("jquery");
+  const moment = window.moment || require("moment");
 
   import 'eonasdan-bootstrap-datetimepicker';
   // You have to import css yourself
