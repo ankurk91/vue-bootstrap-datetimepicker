@@ -12,7 +12,7 @@ module.exports = {
       'node_modules'
     ],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
     },
     extensions: ['.js', '.jsx', '.json', '.vue']
   },
@@ -27,10 +27,11 @@ module.exports = {
     'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css'
   ],
   output: {
-    path: path.resolve(__dirname, 'dist'),// where to store build files
-    filename: "vue-bootstrap-datetimepicker.min.js", // build file name
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'vue-bootstrap-datetimepicker.min.js',
     library: 'VueBootstrapDatetimePicker',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -49,8 +50,7 @@ module.exports = {
     new CleanWebpackPlugin(['./dist']),
   ],
   devtool: false,
-  target: 'web',
   performance: {
-    hints: false
+    hints: false,
   }
 };

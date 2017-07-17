@@ -22,9 +22,9 @@ module.exports = {
     vendor: ['vue', 'moment', 'moment-timezone', 'eonasdan-bootstrap-datetimepicker', 'jquery', 'bootstrap']
   },
   output: {
-    path: path.resolve(__dirname, 'docs'),// where to store build files
-    publicPath: '',// to be used in index.html
-    filename: "js/[name].[hash].js" // build file name
+    path: path.resolve(__dirname, 'docs'),
+    publicPath: '',
+    filename: "js/[name].[hash].js",
   },
   module: {
     rules: [
@@ -76,7 +76,7 @@ module.exports = {
     }),
     new webpack.optimize.CommonsChunkPlugin('vendor'),
     // Required when devServer.hot = true
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
   // Dev server related configs
   devServer: {
@@ -91,7 +91,6 @@ module.exports = {
     stats: 'errors-only'
   },
   devtool: '#cheap-module-eval-source-map',
-  target: 'web'
 };
 
 
