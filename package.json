@@ -4,7 +4,6 @@
   "description": "Vue.js component for bootstrap-datetimepicker",
   "main": "dist/vue-bootstrap-datetimepicker.min.js",
   "unpkg": "dist/vue-bootstrap-datetimepicker.min.js",
-  "jsnext:main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ankurk91/vue-bootstrap-datetimepicker.git"
