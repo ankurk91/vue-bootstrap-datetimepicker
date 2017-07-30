@@ -105,6 +105,7 @@
       value (newValue) {
         this.dp && this.dp.date(newValue)
       },
+
       /**
        * Watch for any change in options and set them
        *
