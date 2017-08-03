@@ -24,7 +24,7 @@
       value: {
         default: null,
         required: true,
-        validator (value) {
+        validator(value) {
           return value === null || value instanceof Date || typeof value === 'string' || value instanceof String || value instanceof moment
         }
       },
@@ -68,12 +68,12 @@
         type: String
       },
     },
-    data () {
+    data() {
       return {
         dp: null,
       };
     },
-    mounted () {
+    mounted() {
       // Return early if date-picker is already loaded
       if (this.dp) return;
       // Handle wrapped input
@@ -89,7 +89,7 @@
       // Watch for changes
       $elem.on('dp.change', this.onChange);
     },
-    beforeDestroy () {
+    beforeDestroy() {
       // Free up memory
       if (this.dp) {
         this.dp.destroy();
@@ -102,8 +102,8 @@
        *
        * @param newValue
        */
-      value (newValue) {
-        this.dp && this.dp.date(newValue)
+      value(newValue) {
+        this.dp && this.dp.date(newValue || null)
       },
 
       /**
@@ -111,7 +111,7 @@
        *
        * @param newConfig Object
        */
-      config (newConfig) {
+      config(newConfig) {
         this.dp && this.dp.options(Object.assign(this.dp.options(), newConfig));
       }
     },
@@ -121,8 +121,8 @@
        *
        * @param event
        */
-      onChange (event) {
-        this.$emit('input', event.date);
+      onChange(event) {
+        this.$emit('input', event.date || null);
       }
     }
   };

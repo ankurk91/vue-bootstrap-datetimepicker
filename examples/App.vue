@@ -188,7 +188,9 @@
           },
           range: {
             format: 'DD/MM/YYYY',
-            useCurrent: false
+            useCurrent: false,
+            showClear: true,
+            showClose: true,
           }
         },
       }
@@ -225,13 +227,13 @@
       let $endDate = $(this.$refs.endDate.$el);
 
       $startDate.on('dp.change', (e) => {
-        console.log('start dp.change', e);
-        $endDate.data('DateTimePicker').minDate(e.date);
+        console.log('start dp.change', e, e.date);
+        $endDate.data('DateTimePicker').minDate(e.date || null);
       });
 
       $endDate.on('dp.change', (e) => {
-        console.log('end dp.change', e);
-        $startDate.data('DateTimePicker').maxDate(e.date);
+        console.log('end dp.change', e, e.date);
+        $startDate.data('DateTimePicker').maxDate(e.date || null);
       });
     }
   }
