@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.4.3...3.0.0)
+* Change: `DatetimePicker.vue` file name to `component.vue`
+    - This may be **breaking** for users who were directly importing `.vue` file
+* Add: Ability to pass component name when used a plugin
+* Fix: Handle `false` value and convert them to `null`, [#4](https://github.com/ankurk91/vue-bootstrap-datetimepicker/issues/4)
+
 ## [2.4.3](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.4.2...2.4.3)
 - Fix: stopped working in non module environment, [#1](https://github.com/ankurk91/vue-bootstrap-datetimepicker/issues/1)
 

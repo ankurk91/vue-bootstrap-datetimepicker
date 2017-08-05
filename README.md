@@ -28,7 +28,7 @@ yarn add vue-bootstrap-datetimepicker
 
 ## Requirements
 * Vue.js ^2.4.2
-* Bootstrap ^3.3.7 
+* Bootstrap ^3.3.7 (only css)
 * jQuery >=1.8.3 || ^3.2.1
 * [Moment.js](https://momentjs.com/) ^2.18
     
@@ -45,9 +45,7 @@ yarn add vue-bootstrap-datetimepicker
 </template>
 
 <script>
-  // Import required dependencies
-  import moment from 'moment';
-  import jQuery from "jquery";  
+  // Import required dependencies 
   import 'bootstrap/dist/css/bootstrap.css';
   
   // Import this component
