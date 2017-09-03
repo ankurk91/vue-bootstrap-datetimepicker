@@ -215,9 +215,8 @@
       },
       updateConfig() {
         console.log('Update config');
-        this.configs.basic = {
-          viewMode: 'years'
-        }
+        // Right way to update config
+        this.$set(this.configs.basic, 'viewMode', 'years');
       }
     },
     mounted() {
