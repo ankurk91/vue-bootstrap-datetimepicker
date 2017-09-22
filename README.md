@@ -23,6 +23,7 @@ yarn add vue-bootstrap-datetimepicker
 * Reactive [config](http://eonasdan.github.io/bootstrap-datetimepicker/Options/) options
     - You can change config options dynamically
     - Component will watch for changes and apply them
+    - You are suggested to modify config via [Vue.set](https://vuejs.org/v2/api/#Vue-set)    
 * Play nice with [vee-validate](https://github.com/logaretm/vee-validate) validation library
 
 
@@ -135,7 +136,7 @@ The component accepts these props:
 
 ## Run examples on your localhost
 * Clone this repo
-* Make sure you have node-js >=6.10 and [yarn](https://yarnpkg.com) >=0.27.x
+* Make sure you have node-js >=6.10 and [yarn](https://yarnpkg.com) >=1.x
 * Install dependencies
 ``
 yarn install
@@ -146,8 +147,6 @@ yarn start
 ``
 * This should open the demo page at ``http://localhost:8080``
 
-## todo
-* Inline mode, who uses it ?
 
 ## Changelog
 Changelog for each release can be found [here](CHANGELOG.md)
