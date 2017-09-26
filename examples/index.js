@@ -4,7 +4,12 @@ import Vue from 'vue';
 Vue.config.productionTip = false;
 
 // vee-validate is just for demo
-import VeeValidate from 'vee-validate';
+import VeeValidate, {Validator} from 'vee-validate';
+// Install date validations
+// https://github.com/baianat/vee-validate/issues/309#issuecomment-279703818
+import moment from 'moment';
+
+Validator.installDateTimeValidators(moment);
 Vue.use(VeeValidate);
 
 //  jQuery is required by bootstrap to work

@@ -28,7 +28,7 @@ yarn add vue-bootstrap-datetimepicker
 
 
 ## Requirements
-* Vue.js ^2.4.2
+* Vue.js ^2.4.4
 * Bootstrap ^3.3.7 (only css)
 * jQuery >=1.8.3 || ^3.2.1
 * [Moment.js](https://momentjs.com/) ^2.18
@@ -107,7 +107,7 @@ The component accepts these props:
 <link href="https://unpkg.com/eonasdan-bootstrap-datetimepicker@4.17.47/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
 <!-- Vue js -->
-<script src="https://unpkg.com/vue@2.4.2/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue@2.4/dist/vue.min.js"></script>
 <!-- Lastly add this package -->
 <script src="https://unpkg.com/vue-bootstrap-datetimepicker"></script>
 ```
@@ -132,6 +132,21 @@ The component accepts these props:
     },    
   });
 </script>
+```
+
+### Using Webpack? 
+* Webpack users need to configure [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/)
+```js
+// webpack.config.js
+plugins: [
+    new webpack.ProvidePlugin({
+      Vue: ['vue/dist/vue.esm.js', 'default'],
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      $: 'jquery',
+      moment: 'moment',
+    }),
+  ]  
 ```
 
 ## Run examples on your localhost
