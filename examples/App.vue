@@ -28,7 +28,7 @@
 
           <div class="form-group">
             <label>Select date (basic)</label>
-            <date-picker v-model="form.date" :config="configs.basic"></date-picker>
+            <date-picker v-model="form.date" :config="configs.basic" @dp-change="listenToChangeEvent"></date-picker>
           </div>
 
           <div class="form-group">
@@ -217,6 +217,9 @@
         console.log('Update config');
         // Right way to update config
         this.$set(this.configs.basic, 'viewMode', 'years');
+      },
+      listenToChangeEvent(...args) {
+        console.log('listen To dp.change event - ', ...args);
       }
     },
     mounted() {

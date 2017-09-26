@@ -19,6 +19,9 @@
   import 'eonasdan-bootstrap-datetimepicker';
   // You have to import css yourself
 
+  // http://eonasdan.github.io/bootstrap-datetimepicker/Events/
+  const events = ['hide', 'show', 'change', 'error', 'update'];
+
   export default {
     props: {
       value: {
@@ -71,29 +74,34 @@
     data() {
       return {
         dp: null,
+        // jQuery DOM
+        elem: null
       };
     },
     mounted() {
       // Return early if date-picker is already loaded
       if (this.dp) return;
       // Handle wrapped input
-      let elem = this.wrap ? this.$el.parentNode : this.$el;
+      let node = this.wrap ? this.$el.parentNode : this.$el;
       // Cache DOM
-      let $elem = jQuery(elem);
+      this.elem = jQuery(node);
       // Init date-picker
-      $elem.datetimepicker(this.config);
+      this.elem.datetimepicker(this.config);
       // Store data control
-      this.dp = $elem.data('DateTimePicker');
+      this.dp = this.elem.data('DateTimePicker');
       // Set initial value
       this.dp.date(this.value);
       // Watch for changes
-      $elem.on('dp.change', this.onChange);
+      this.elem.on('dp.change', this.onChange);
+      // Register remaining events
+      this.registerEvents();
     },
     beforeDestroy() {
       // Free up memory
       if (this.dp) {
         this.dp.destroy();
         this.dp = null;
+        this.elem = null;
       }
     },
     watch: {
@@ -123,6 +131,17 @@
        */
       onChange(event) {
         this.$emit('input', event.date || null);
+      },
+
+      /**
+       * Emit all available events
+       */
+      registerEvents() {
+        events.forEach((name) => {
+          this.elem.on('dp.' + name, (...args) => {
+            this.$emit('dp-' + name, ...args);
+          });
+        })
       }
     }
   };
