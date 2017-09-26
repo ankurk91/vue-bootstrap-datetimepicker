@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.0.0...3.1.0)
+* Add: Emit all available [events](eonasdan.github.io/bootstrap-datetimepicker/Events/)
+    - You can receive the events like this
+```html
+<date-picker v-model="date" @dp-hide="onHide"></date-picker>
+```
+
 ## [3.0.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.4.3...3.0.0)
 * Change: `DatetimePicker.vue` file name to `component.vue`
     - This may be **breaking** for users who were directly importing `.vue` file
