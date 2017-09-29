@@ -94,6 +94,13 @@ The component accepts these props:
 | wrap            | Boolean            | `false` | Set this to true when wrapped in 'input-group' |
 | id              | String             | `''` | Set input field id |
 
+## Events
+* The component will emit all available [events](http://eonasdan.github.io/bootstrap-datetimepicker/Events)
+* You can listen to them in your component like -
+```html
+<date-picker v-model="date" @dp-hide="doSomethingOnHide"></date-picker>
+```
+
 ## Install in non-module environments (without webpack)
 * Acquire required files
 ```html
