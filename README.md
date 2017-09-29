@@ -156,6 +156,17 @@ plugins: [
   ]  
 ```
 
+### Using Laravel Mix ?
+* Update your `webpack.mix.js` file, [ref](https://github.com/JeffreyWay/laravel-mix/blob/master/docs/autoloading.md)
+```js
+// webpack.mix.js
+mix.autoload({
+    'jquery': ['$', 'window.jQuery', 'jQuery'],
+    'vue': ['Vue','window.Vue'],   
+    'moment': ['moment','window.moment'],   
+  })
+```
+
 ## Run examples on your localhost
 * Clone this repo
 * Make sure you have node-js >=6.10 and [yarn](https://yarnpkg.com) >=1.x
