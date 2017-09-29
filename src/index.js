@@ -1,12 +1,10 @@
 import component from './component.vue';
 
-const DatetimePickerPlugin = {
-  install: function (Vue, params) {
-    let name = 'date-picker';
-    if (typeof params === 'string') name = params;
+const DatetimePickerPlugin = (Vue, params) => {
+  let name = 'date-picker';
+  if (typeof params === 'string') name = params;
 
-    Vue.component(name, component);
-  }
+  Vue.component(name, component);
 };
 
 component.install = DatetimePickerPlugin.install;
