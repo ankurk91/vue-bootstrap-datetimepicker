@@ -1,5 +1,8 @@
 # Changelog
 
+## [3.1.1](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.1.0...3.1.1)
+* Fix: prevent double `dp-change` event
+
 ## [3.1.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.0.0...3.1.0)
 * Add: Emit all available [events](eonasdan.github.io/bootstrap-datetimepicker/Events/)
     - You can receive the events like this

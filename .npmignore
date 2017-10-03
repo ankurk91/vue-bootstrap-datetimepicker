@@ -3,6 +3,7 @@
 /.github/
 /examples/
 /docs/
+/test/
 
 .babelrc
 .editorconfig
