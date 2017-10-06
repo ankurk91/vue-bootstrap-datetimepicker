@@ -7,7 +7,7 @@ const DatetimePickerPlugin = (Vue, params) => {
   Vue.component(name, component);
 };
 
-component.install = DatetimePickerPlugin.install;
+component.install = DatetimePickerPlugin;
 
 export default component;
 export {component, DatetimePickerPlugin};

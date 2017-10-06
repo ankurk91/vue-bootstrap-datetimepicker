@@ -23,6 +23,7 @@
   const events = ['hide', 'show', 'change', 'error', 'update'];
 
   export default {
+    name: 'date-picker',
     props: {
       value: {
         default: null,
