@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.1.2](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.1.1...3.1.2)
+* Revert: prevent double `dp-change` event
+    - This was preventing date-picker to update DOM
+* Fix: use as plugin
+* chore: generate two dist file
+
 ## [3.1.1](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.1.0...3.1.1)
 * Fix: prevent double `dp-change` event
 
