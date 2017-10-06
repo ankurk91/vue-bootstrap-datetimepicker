@@ -111,9 +111,6 @@
        * @param newValue
        */
       value(newValue) {
-        // Prevent dp-change being triggered multiple times
-        if (newValue === this.value) return;
-        // Notify datepicker that there is a change in date
         this.dp && this.dp.date(newValue || null)
       },
 
