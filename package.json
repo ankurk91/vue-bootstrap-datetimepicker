@@ -2,7 +2,7 @@
   "name": "vue-bootstrap-datetimepicker",
   "version": "3.1.1",
   "description": "Vue.js component for bootstrap-datetimepicker",
-  "main": "dist/vue-bootstrap-datetimepicker.min.js",
+  "main": "dist/vue-bootstrap-datetimepicker.js",
   "unpkg": "dist/vue-bootstrap-datetimepicker.min.js",
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "html-webpack-plugin": "^2.30.1",
     "jquery": "^3.2.1",
     "style-loader": "^0.18.2",
+    "unminified-webpack-plugin": "^1.2.0",
     "vee-validate": "^2.0.0-rc.12",
     "vue": "^2.4.2",
     "vue-loader": "^13.0.4",
