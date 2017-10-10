@@ -3,11 +3,11 @@ import {shallow} from 'vue-test-utils'
 import Component from '../../src/component.vue';
 import moment from 'moment';
 
-describe('Flatpickr props', () => {
+describe('Datepicker props', () => {
 
   // Store for future usage
   const props = {
-    value: '10/10/2017',
+    value: '10/11/2017',
     inputClass: 'input-field',
     placeholder: 'select-a-date',
     name: 'dob',
