@@ -5,6 +5,8 @@
 [![npm-version](https://img.shields.io/npm/v/vue-bootstrap-datetimepicker.svg)](https://www.npmjs.com/package/vue-bootstrap-datetimepicker)
 [![github-tag](https://img.shields.io/github/tag/ankurk91/vue-bootstrap-datetimepicker.svg?maxAge=1800)](https://github.com/ankurk91/vue-bootstrap-datetimepicker/)
 [![license](https://img.shields.io/github/license/ankurk91/vue-bootstrap-datetimepicker.svg?maxAge=1800)](https://yarnpkg.com/en/package/vue-bootstrap-datetimepicker)
+[![build-status](https://travis-ci.org/ankurk91/vue-bootstrap-datetimepicker.svg?branch=master)](https://travis-ci.org/ankurk91/vue-bootstrap-datetimepicker)
+[![codecov](https://codecov.io/gh/ankurk91/vue-bootstrap-datetimepicker/branch/master/graph/badge.svg)](https://codecov.io/gh/ankurk91/vue-bootstrap-datetimepicker)
 
 Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.github.io/bootstrap-datetimepicker/)
 

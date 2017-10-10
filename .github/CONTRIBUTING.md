@@ -17,7 +17,8 @@
 yarn install
 ```
 * Make changes in ``src`` folder
-* You can check if everything is working fine by running examples in browser
+* Write/update test case for the feature/fix you made 
+* You can check if everything is working fine by running tests
 ```
-yarn run dev
+yarn test
 ```
