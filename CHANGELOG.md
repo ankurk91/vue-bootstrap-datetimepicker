@@ -4,7 +4,8 @@
 * Revert: prevent double `dp-change` event
     - This was preventing date-picker to update DOM
 * Fix: use as plugin
-* chore: generate two dist file, it means bower no longer supported.
+* Chore: generate two dist file.
+* Change: `dist` folder is no longer part of repo. it means bower no longer supported.
 
 ## [3.1.1](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.1.0...3.1.1)
 * Fix: prevent double `dp-change` event
