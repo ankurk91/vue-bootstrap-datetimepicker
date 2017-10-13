@@ -19,7 +19,6 @@ module.exports = {
   },
   entry: {
     app: './examples/index.js',
-    vendor: ['vue', 'moment', 'moment-timezone', 'eonasdan-bootstrap-datetimepicker', 'jquery', 'bootstrap']
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
@@ -75,7 +74,18 @@ module.exports = {
       $: 'jquery',
       moment: 'moment',
     }),
-    new webpack.optimize.CommonsChunkPlugin('vendor'),
+    // https://webpack.js.org/plugins/commons-chunk-plugin/
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: function (module) {
+        // This prevents stylesheet resources with the .css or .scss extension
+        // from being moved from their original chunk to the vendor chunk
+        if (module.resource && (/^.*\.(css|scss)$/).test(module.resource)) {
+          return false;
+        }
+        return module.context && module.context.indexOf("node_modules") !== -1;
+      }
+    }),
     // Required when devServer.hot = true
     new webpack.HotModuleReplacementPlugin(),
   ],

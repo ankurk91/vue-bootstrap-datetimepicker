@@ -81,6 +81,7 @@
     },
     mounted() {
       // Return early if date-picker is already loaded
+      /* istanbul ignore if */
       if (this.dp) return;
       // Handle wrapped input
       let node = this.wrap ? this.$el.parentNode : this.$el;
@@ -99,6 +100,7 @@
     },
     beforeDestroy() {
       // Free up memory
+      /* istanbul ignore else */
       if (this.dp) {
         this.dp.destroy();
         this.dp = null;

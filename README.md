@@ -10,14 +10,7 @@
 
 Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.github.io/bootstrap-datetimepicker/)
 
-## Installation
-```bash
-# npm
-npm install vue-bootstrap-datetimepicker --save
-
-# Yarn
-yarn add vue-bootstrap-datetimepicker
-```
+## Demo on [JSFiddle](https://jsfiddle.net/ankurk91/zupazg2u/)
 
 ## Features
 * Reactive ``v-model`` value
@@ -28,6 +21,15 @@ yarn add vue-bootstrap-datetimepicker
     - You are suggested to modify config via [Vue.set](https://vuejs.org/v2/api/#Vue-set)    
 * Play nice with [vee-validate](https://github.com/logaretm/vee-validate) validation library
 
+
+## Installation
+```bash
+# npm
+npm install vue-bootstrap-datetimepicker --save
+
+# Yarn
+yarn add vue-bootstrap-datetimepicker
+```
 
 ## Requirements
 * Vue.js ^2.4.4
@@ -116,7 +118,7 @@ The component accepts these props:
 <link href="https://unpkg.com/eonasdan-bootstrap-datetimepicker@4.17.47/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
 <!-- Vue js -->
-<script src="https://unpkg.com/vue@2.4/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue@2.5/dist/vue.min.js"></script>
 <!-- Lastly add this package -->
 <script src="https://unpkg.com/vue-bootstrap-datetimepicker"></script>
 ```
@@ -171,7 +173,7 @@ mix.autoload({
 
 ## Run examples on your localhost
 * Clone this repo
-* Make sure you have node-js >=6.10 and [yarn](https://yarnpkg.com) >=1.x
+* You should have node-js >=6.10 and yarn >=1.x pre-installed
 * Install dependencies
 ``
 yarn install
@@ -180,11 +182,19 @@ yarn install
 ``
 yarn start
 ``
-* This should open the demo page at ``http://localhost:8080``
+* This should open the demo page at ``http://localhost:8080`` in your default web browser
 
+
+### Testing
+* This package is using [Jest](https://github.com/facebook/jest) and [vue-test-utils](https://github.com/vuejs/vue-test-utils) for testing.
+* Tests can be found in `__test__` folder.
+* Execute tests with this command
+```bash
+yarn test
+```
 
 ## Changelog
-Changelog for each release can be found [here](CHANGELOG.md)
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## License
 [MIT](LICENSE.txt) License

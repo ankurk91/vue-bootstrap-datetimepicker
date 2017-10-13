@@ -2,6 +2,8 @@ import component from '../../src/component.vue';
 // Lets import full build
 import Vue from 'vue/dist/vue.common';
 
+Vue.config.productionTip = false;
+
 describe('datepicker component', () => {
 
   // Make a copy of local vue

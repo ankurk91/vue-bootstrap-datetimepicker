@@ -34,8 +34,8 @@
           <div class="form-group">
             <label for="date-time-input">Select date time (wrap)</label>
             <div class="input-group date">
-              <date-picker v-model="form.date" id="date-time-input"
-                           :wrap="true" :config="{allowInputToggle:true}">
+              <date-picker v-model="form.dateWrap" id="date-time-input"
+                           :wrap="true" :config="configs.wrap">
               </date-picker>
               <div class="input-group-addon">
                 <span class="glyphicon glyphicon-calendar"></span>
@@ -166,6 +166,7 @@
       return {
         form: {
           date: new Date(),
+          dateWrap: null,
           dateModal: moment(),
           dateValidate: null,
           time: null,
@@ -177,6 +178,9 @@
           basic: {
             // https://momentjs.com/docs/#/displaying/format/
             format: 'DD/MM/YYYY'
+          },
+          wrap: {
+            allowInputToggle: true
           },
           timePicker: {
             format: 'LT',
