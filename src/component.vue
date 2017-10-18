@@ -1,14 +1,6 @@
 <template>
 
-  <input type="text"
-         class="form-control input"
-         :class="inputClass"
-         :id="id"
-         :name="name"
-         :placeholder="placeholder"
-         :required="required"
-         :readOnly="readOnly"
-         :disabled="disabled">
+  <input type="text" class="form-control">
 
 </template>
 
@@ -37,39 +29,12 @@
         type: Object,
         default: () => ({})
       },
-      placeholder: {
-        type: String,
-        default: ''
-      },
-      inputClass: {
-        type: [String, Object],
-        default: ''
-      },
-      name: {
-        type: String,
-        default: 'datetime'
-      },
-      required: {
-        type: Boolean,
-        default: false
-      },
-      readOnly: {
-        type: Boolean,
-        default: false
-      },
-      disabled: {
-        type: Boolean,
-        default: false
-      },
       /**
-       * You can to set this to true when component is wrapped in input-group
+       * You can set this to true when component is wrapped in input-group
        */
       wrap: {
         type: Boolean,
         default: false
-      },
-      id: {
-        type: String
       },
     },
     data() {
@@ -141,8 +106,8 @@
        */
       registerEvents() {
         events.forEach((name) => {
-          this.elem.on('dp.' + name, (...args) => {
-            this.$emit('dp-' + name, ...args);
+          this.elem.on(`dp.${name}`, (...args) => {
+            this.$emit(`dp-${name}`, ...args);
           });
         })
       }

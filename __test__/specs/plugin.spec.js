@@ -14,7 +14,7 @@ describe('datepicker global component', () => {
 
     let app = localVue.extend({
       template: `<div id="app">
-                  <date-picker class="date-picker" :value="date" :config="config"></date-picker>
+                  <date-picker name="date" class="date-picker" v-model="date" :config="config"></date-picker>
                  </div>`,
       data() {
         return {
@@ -28,8 +28,11 @@ describe('datepicker global component', () => {
 
     let wrapper = new app().$mount();
 
-    expect(wrapper.$el.firstChild.tagName).toBe('INPUT');
-    expect(wrapper.$el.firstChild.value).toBe('10/10/2017');
+    let elem = wrapper.$el.firstChild;
+    expect(elem.tagName).toBe('INPUT');
+    expect(elem.value).toBe('10/10/2017');
+    expect(elem.getAttribute('name')).toEqual('date');
+    expect(elem.getAttribute('class')).toContain('date-picker');
   });
 
 });

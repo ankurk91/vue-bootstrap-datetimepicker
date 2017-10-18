@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.1.2...4.0.0) (unreleased)
+* Change:
+    - `input-class` prop has been removed, you can always use Vue.js inbuilt [class](https://vuejs.org/v2/guide/class-and-style.html#With-Components) binding
+    ```html
+      <date-picker v-model="date" class="custom-input"></date-picker>
+    ```   
+    - Similarly `name`, `id`, `placeholder` and `required` props has been removed, you can still specify any number of attributes on component
+    ```html
+      <date-picker v-model="date" name="date-of-birth" id="js-date" placeholder="Select date" aria-required="true"></date-picker>
+    ```
+    
 ## [3.1.2](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.1.1...3.1.2)
 * Revert: prevent double `dp-change` event
     - This was preventing date-picker to update DOM
@@ -13,9 +24,9 @@
 ## [3.1.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.0.0...3.1.0)
 * Add: Emit all available [events](eonasdan.github.io/bootstrap-datetimepicker/Events/)
     - You can receive the events like this
-```html
-<date-picker v-model="date" @dp-hide="onHide"></date-picker>
-```
+    ```html
+    <date-picker v-model="date" @dp-hide="onHide"></date-picker>
+    ```
 
 ## [3.0.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/2.4.3...3.0.0)
 * Change: `DatetimePicker.vue` file name to `component.vue`

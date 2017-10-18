@@ -3,7 +3,7 @@ import {shallow} from 'vue-test-utils'
 import Component from '../../src/component.vue';
 import moment from 'moment';
 
-describe('Datepicker watchers', () => {
+describe('datepicker watchers', () => {
 
   let wrapper;
 
@@ -28,7 +28,9 @@ describe('Datepicker watchers', () => {
   });
 
   test('updates configs runtime', () => {
-    wrapper.setProps({config: {showTodayButton: true}});
+    wrapper.setProps({
+      config: {showTodayButton: true}
+    });
     expect(wrapper.vm.dp.options()).toHaveProperty('showTodayButton', true);
   });
 

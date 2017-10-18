@@ -2,7 +2,7 @@ import {shallow} from 'vue-test-utils'
 
 import Component from '../../src/component.vue';
 
-describe('Datepicker component', () => {
+describe('datepicker component', () => {
 
   let wrapper;
 

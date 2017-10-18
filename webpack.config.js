@@ -39,6 +39,7 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
+        exclude: path.resolve(__dirname, 'node_modules'),
       },
       {
         test: /\.js$/,

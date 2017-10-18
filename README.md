@@ -32,7 +32,6 @@ yarn add vue-bootstrap-datetimepicker
 ```
 
 ## Requirements
-* Vue.js ^2.4.4
 * Bootstrap ^3.3.7 (only css)
 * jQuery >=1.8.3 || ^3.2.1
 * [Moment.js](https://momentjs.com/) ^2.18
@@ -43,7 +42,7 @@ yarn add vue-bootstrap-datetimepicker
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <date-picker v-model="date"></date-picker>
+        <date-picker v-model="date" :config="config"></date-picker>
       </div>
     </div>
   </div>
@@ -62,7 +61,11 @@ yarn add vue-bootstrap-datetimepicker
   export default {    
     data () {
       return {
-        date: new Date(),       
+        date: new Date(),
+        config: {
+          format: 'DD/MM/YYYY',
+          useCurrent: false,
+        }       
       }
     },
     components: {
@@ -89,14 +92,7 @@ The component accepts these props:
 | :---            |  :---:             | :---:                 | :---             |
 | v-model / value | String / Date Object / [moment](https://momentjs.com/) / null | `null` | Set or Get date-picker value |
 | config          | Object             | `{}` | Datetime picker configuration [options](http://eonasdan.github.io/bootstrap-datetimepicker/Options/)|
-| placeholder     | String             | `''` | Set placeholder on input |
-| input-class     | String / Object    | `''` | Add CSS class to input  |
-| name            | String             | `datetime` | Set input field name  |
-| required        | Boolean            | `false` | Make input field required |
-| read-only       | Boolean            | `false` | Make input field read-only |
-| disabled        | Boolean            | `false` | Make input field disabled |
 | wrap            | Boolean            | `false` | Set this to true when wrapped in 'input-group' |
-| id              | String             | `''` | Set input field id |
 
 ## Events
 * The component will emit all available [events](http://eonasdan.github.io/bootstrap-datetimepicker/Events)
@@ -128,7 +124,7 @@ The component accepts these props:
 <div id="app" class="container">
   <div class="row">
     <div class="col-md-12">
-      <date-picker v-model="date"></date-picker>
+      <date-picker v-model="date" name="date-of-birth"></date-picker>
     </div>
   </div>
 </div>
@@ -174,24 +170,15 @@ mix.autoload({
 ## Run examples on your localhost
 * Clone this repo
 * You should have node-js >=6.10 and yarn >=1.x pre-installed
-* Install dependencies
-``
-yarn install
-``
-* Run webpack dev server
-``
-yarn start
-``
-* This should open the demo page at ``http://localhost:8080`` in your default web browser
+* Install dependencies - `yarn install`
+* Run webpack dev server - `yarn start`
+* This should open the demo page at ``http://localhost:8000`` in your default web browser
 
 
 ### Testing
 * This package is using [Jest](https://github.com/facebook/jest) and [vue-test-utils](https://github.com/vuejs/vue-test-utils) for testing.
 * Tests can be found in `__test__` folder.
-* Execute tests with this command
-```bash
-yarn test
-```
+* Execute tests with this command - `yarn test`
 
 ## Changelog
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.

@@ -12,13 +12,7 @@
 
 ### Development setup
 * You will need [node-js](http://nodejs.org/) v6.10+ and [yarn](https://yarnpkg.com) v1.x
-* After clone the repo, run:
-```
-yarn install
-```
+* After cloning the repo, run - `yarn install`
 * Make changes in ``src`` folder
 * Write/update test case for the feature/fix you made 
-* You can check if everything is working fine by running tests
-```
-yarn test
-```
+* You can check if everything is working fine by running tests - `yarn test`
