@@ -11,6 +11,7 @@
   import 'eonasdan-bootstrap-datetimepicker';
   // You have to import css yourself
 
+  // Events list without prefix
   // http://eonasdan.github.io/bootstrap-datetimepicker/Events/
   const events = ['hide', 'show', 'change', 'error', 'update'];
 
@@ -98,7 +99,8 @@
        * @param event
        */
       onChange(event) {
-        this.$emit('input', event.date || null);
+        let formattedDate = event.date ? event.date.format(this.dp.format()) : null;
+        this.$emit('input', formattedDate);
       },
 
       /**

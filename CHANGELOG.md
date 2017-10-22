@@ -1,7 +1,8 @@
 # Changelog
 
-## [4.0.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.1.2...4.0.0) (unreleased)
+## [4.0.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.1.2...4.0.0) (breaking)
 * Change:
+    - Component now sets the v-model value in same format as specified in config, previously it was moment string `2017-10-02T06:14:35.665Z` but now it should follow the format for example if format is `DD/MM/YYYY` then v-model will be like `22/10/2017`
     - `input-class` prop has been removed, you can always use Vue.js inbuilt [class](https://vuejs.org/v2/guide/class-and-style.html#With-Components) binding
     ```html
       <date-picker v-model="date" class="custom-input"></date-picker>
