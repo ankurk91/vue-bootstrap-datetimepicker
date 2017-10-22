@@ -137,7 +137,7 @@
             <form method="post" action="/" onsubmit="return false">
               <div class="form-group">
                 <label>Select a date</label>
-                <date-picker v-model="form.dateModal"></date-picker>
+                <date-picker v-model="form.dateModal" :config="{format:'LLL'}"></date-picker>
               </div>
               <pre>{{form.dateModal}}</pre>
             </form>
