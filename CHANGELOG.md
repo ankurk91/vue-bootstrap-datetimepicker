@@ -1,5 +1,9 @@
 # Changelog
 
+## [4.1.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/4.0.0...4.1.0) 
+* Add:
+    - Support inline mode
+    
 ## [4.0.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.1.2...4.0.0) (breaking)
 * Change:
     - Component now sets the v-model value in same format as specified in config, previously it was moment string `2017-10-02T06:14:35.665Z` but now it should follow the format; for example if format is `DD/MM/YYYY` then v-model will be like `22/10/2017`

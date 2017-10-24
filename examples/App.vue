@@ -79,6 +79,14 @@
             <date-picker :config="configs.locale" v-model="form.dateLocale"></date-picker>
           </div>
 
+          <div class="form-group">
+            <label>Select date (inline)</label>
+            <date-picker :config="configs.inline" v-model="form.dateInline"></date-picker>
+            <p class="help-block">
+              {{form.dateInline}}
+            </p>
+          </div>
+
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
@@ -171,6 +179,7 @@
           dateValidate: null,
           time: null,
           dateLocale: moment(),
+          dateInline: moment().toString(),
           startDate: null,
           endDate: null
         },
@@ -189,6 +198,11 @@
           locale: {
             // https://github.com/moment/moment/tree/develop/locale
             locale: 'hi',
+          },
+          inline: {
+            format: 'LLL',
+            inline: true,
+            sideBySide: true
           },
           range: {
             format: 'DD/MM/YYYY',

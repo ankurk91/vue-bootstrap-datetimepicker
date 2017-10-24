@@ -1,6 +1,7 @@
 <template>
 
-  <input type="text" class="form-control">
+  <div class="datetimepicker-inline" v-if="config.inline"></div>
+  <input type="text" class="form-control" v-else>
 
 </template>
 
@@ -32,6 +33,7 @@
       },
       /**
        * You can set this to true when component is wrapped in input-group
+       * Note: inline and wrap mode wont work together
        */
       wrap: {
         type: Boolean,
@@ -89,7 +91,7 @@
        * @param newConfig Object
        */
       config(newConfig) {
-        this.dp && this.dp.options(Object.assign(this.dp.options(), newConfig));
+        this.dp && this.dp.options(Object.assign({}, this.dp.options(), newConfig));
       }
     },
     methods: {
