@@ -1,6 +1,6 @@
 import {shallow} from 'vue-test-utils'
 
-import Component from '../../src/component.vue';
+import Component from '../src/component.vue';
 
 describe('datepicker component', () => {
 
@@ -30,7 +30,7 @@ describe('datepicker component', () => {
   });
 
   test('clean up on destroy', () => {
-    wrapper.vm.$destroy();
+    wrapper.destroy();
     expect(wrapper.isEmpty()).toBe(true);
     expect(wrapper.vm.$data.dp).toBe(null);
   });

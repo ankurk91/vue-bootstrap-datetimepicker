@@ -1,4 +1,4 @@
-import component from '../../src/component.vue';
+import component from '../src/component.vue';
 // Lets import full build
 import Vue from 'vue/dist/vue.common';
 

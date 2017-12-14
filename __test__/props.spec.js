@@ -1,6 +1,6 @@
 import {shallow} from 'vue-test-utils'
 
-import Component from '../../src/component.vue';
+import Component from '../src/component.vue';
 import moment from 'moment';
 
 describe('datepicker props', () => {
@@ -23,17 +23,17 @@ describe('datepicker props', () => {
   });
 
   afterEach(() => {
-    wrapper.vm.$destroy();
+    wrapper.destroy();
   });
 
   test('accepts config via prop', () => {
-    expect(wrapper.hasProp('config', props.config)).toBe(true);
+    expect(wrapper.props().config).toEqual(props.config);
     // dp is the datepicker instance
     expect(wrapper.vm.dp.options()).toHaveProperty('format', props.config.format);
   });
 
   test('accepts value via prop', () => {
-    expect(wrapper.hasProp('value', props.value)).toBe(true);
+    expect(wrapper.props().value).toBe(props.value);
   });
 
   test('validates v-model', () => {

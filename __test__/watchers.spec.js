@@ -1,6 +1,6 @@
 import {shallow} from 'vue-test-utils'
 
-import Component from '../../src/component.vue';
+import Component from '../src/component.vue';
 import moment from 'moment';
 
 describe('datepicker watchers', () => {
@@ -18,7 +18,7 @@ describe('datepicker watchers', () => {
   });
 
   afterEach(() => {
-    wrapper.vm.$destroy();
+    wrapper.destroy();
   });
 
   test('updates value runtime', () => {
