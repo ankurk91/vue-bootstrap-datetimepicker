@@ -91,13 +91,15 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label>Start date</label>
-                <date-picker v-model="form.startDate" :config="configs.range" ref="startDate"></date-picker>
+                <date-picker v-model="form.startDate" :config="configs.start" ref="startDate"
+                             @dp-change="onStartChange"></date-picker>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label>End date</label>
-                <date-picker v-model="form.endDate" :config="configs.range" ref="endDate"></date-picker>
+                <date-picker v-model="form.endDate" :config="configs.end" ref="endDate"
+                             @dp-change="onEndChange"></date-picker>
               </div>
             </div>
           </div>
@@ -142,13 +144,11 @@
             <h4 class="modal-title">Modal example</h4>
           </div>
           <div class="modal-body">
-            <form method="post" action="/" onsubmit="return false">
-              <div class="form-group">
-                <label>Select a date</label>
-                <date-picker v-model="form.dateModal" :config="{format:'LLL'}"></date-picker>
-              </div>
-              <pre>{{form.dateModal}}</pre>
-            </form>
+            <div class="form-group">
+              <label>Select a date</label>
+              <date-picker v-model="form.dateModal" :config="{format:'LLL'}"></date-picker>
+            </div>
+            <pre>{{form.dateModal}}</pre>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -204,7 +204,14 @@
             inline: true,
             sideBySide: true
           },
-          range: {
+          start: {
+            format: 'DD/MM/YYYY',
+            useCurrent: false,
+            showClear: true,
+            showClose: true,
+            minDate: moment()
+          },
+          end: {
             format: 'DD/MM/YYYY',
             useCurrent: false,
             showClear: true,
@@ -238,23 +245,13 @@
       },
       listenToChangeEvent(...args) {
         console.log('listen To dp.change event - ', ...args);
+      },
+      onStartChange(e) {
+        this.$set(this.configs.end, 'minDate', e.date);
+      },
+      onEndChange(e) {
+        this.$set(this.configs.start, 'maxDate', e.date);
       }
     },
-    mounted() {
-      // Linked Pickers example
-      // Don't forget to remove events on beforeDestroy
-      let $startDate = $(this.$refs.startDate.$el);
-      let $endDate = $(this.$refs.endDate.$el);
-
-      $startDate.on('dp.change', (e) => {
-        console.log('start dp.change', e, e.date);
-        $endDate.data('DateTimePicker').minDate(e.date || null);
-      });
-
-      $endDate.on('dp.change', (e) => {
-        console.log('end dp.change', e, e.date);
-        $startDate.data('DateTimePicker').maxDate(e.date || null);
-      });
-    }
   }
 </script>
