@@ -1,4 +1,5 @@
 import component from '../src/component.vue';
+import {mount} from 'vue-test-utils';
 // Lets import full build
 import Vue from 'vue/dist/vue.common';
 
@@ -10,7 +11,7 @@ describe('datepicker component', () => {
   let localVue = Vue.extend();
 
   test('emits events', (done) => {
-    let app = localVue.extend({
+    let app = localVue.component('app', {
       template: `<div id="app">
                   <date-picker class="date-picker" v-model="date" :config="config" @dp-change="onChange"></date-picker>
                  </div>`,
@@ -32,12 +33,13 @@ describe('datepicker component', () => {
       }
     });
 
-    let wrapper = new app().$mount();
-    const spy = jest.spyOn(wrapper, 'onChange');
-    wrapper.$data.date = new Date();
-    wrapper.$forceUpdate();
+    let wrapper = mount(app, {
+      localVue
+    });
+    const spy = jest.spyOn(wrapper.vm, 'onChange');
+    wrapper.setData({date: new Date()});
 
-    wrapper.$nextTick(() => {
+    wrapper.vm.$nextTick(() => {
       expect(spy).toHaveBeenCalled();
       spy.mockReset();
       done()

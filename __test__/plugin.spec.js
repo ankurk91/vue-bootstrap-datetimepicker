@@ -1,4 +1,5 @@
 import Plugin from '../src/index';
+import {mount} from 'vue-test-utils';
 // Lets import full build
 import Vue from 'vue/dist/vue.common';
 
@@ -12,7 +13,7 @@ describe('datepicker global component', () => {
 
   test('works as plugin', () => {
 
-    let app = localVue.extend({
+    let app = localVue.component('app', {
       template: `<div id="app">
                   <date-picker name="date" class="date-picker" v-model="date" :config="config"></date-picker>
                  </div>`,
@@ -26,9 +27,11 @@ describe('datepicker global component', () => {
       }
     });
 
-    let wrapper = new app().$mount();
+    let wrapper = mount(app, {
+      localVue
+    });
 
-    let elem = wrapper.$el.firstChild;
+    let elem = wrapper.vm.$el.firstChild;
     expect(elem.tagName).toBe('INPUT');
     expect(elem.value).toBe('10/10/2017');
     expect(elem.getAttribute('name')).toEqual('date');

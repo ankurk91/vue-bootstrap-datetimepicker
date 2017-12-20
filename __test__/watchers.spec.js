@@ -29,7 +29,9 @@ describe('datepicker watchers', () => {
 
   test('updates configs runtime', () => {
     wrapper.setProps({
-      config: {showTodayButton: true}
+      config: {
+        showTodayButton: true
+      }
     });
     expect(wrapper.vm.dp.options()).toHaveProperty('showTodayButton', true);
   });

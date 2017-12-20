@@ -66,15 +66,6 @@
       // Register remaining events
       this.registerEvents();
     },
-    beforeDestroy() {
-      // Free up memory
-      /* istanbul ignore else */
-      if (this.dp) {
-        this.dp.destroy();
-        this.dp = null;
-        this.elem = null;
-      }
-    },
     watch: {
       /**
        * Listen to change from outside of component and update DOM
@@ -115,6 +106,15 @@
           });
         })
       }
-    }
+    },
+    beforeDestroy() {
+      // Free up memory
+      /* istanbul ignore else */
+      if (this.dp) {
+        this.dp.destroy();
+        this.dp = null;
+        this.elem = null;
+      }
+    },
   };
 </script>

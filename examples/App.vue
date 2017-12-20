@@ -247,10 +247,10 @@
         console.log('listen To dp.change event - ', ...args);
       },
       onStartChange(e) {
-        this.$set(this.configs.end, 'minDate', e.date);
+        this.$set(this.configs.end, 'minDate', e.date || null);
       },
       onEndChange(e) {
-        this.$set(this.configs.start, 'maxDate', e.date);
+        this.$set(this.configs.start, 'maxDate', e.date || null);
       }
     },
   }

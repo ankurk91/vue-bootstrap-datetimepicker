@@ -1,7 +1,7 @@
 # Changelog
 
 ## [4.1.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/4.0.0...4.1.0) 
-* Add: Support inline mode
+* Add: Support for inline mode
         
 ## [4.0.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/3.1.2...4.0.0) (breaking)
 * Change:
