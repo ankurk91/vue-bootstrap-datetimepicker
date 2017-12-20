@@ -1,14 +1,9 @@
 import component from '../src/component.vue';
-import {mount} from 'vue-test-utils';
-// Lets import full build
-import Vue from 'vue/dist/vue.common';
+import {mount, createLocalVue} from 'vue-test-utils';
 
-Vue.config.productionTip = false;
+describe('datepicker component events', () => {
 
-describe('datepicker component', () => {
-
-  // Make a copy of local vue
-  let localVue = Vue.extend();
+  let localVue = createLocalVue();
 
   test('emits events', (done) => {
     let app = localVue.component('app', {
@@ -28,7 +23,7 @@ describe('datepicker component', () => {
       },
       methods: {
         onChange(event) {
-
+          // shh...
         }
       }
     });
@@ -36,6 +31,7 @@ describe('datepicker component', () => {
     let wrapper = mount(app, {
       localVue
     });
+
     const spy = jest.spyOn(wrapper.vm, 'onChange');
     wrapper.setData({date: new Date()});
 

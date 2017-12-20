@@ -20,8 +20,7 @@ describe('datepicker component', () => {
   });
 
   test('opens datepicker when focus', () => {
-    let input = wrapper.find('input');
-    input.trigger('focus');
+    wrapper.trigger('focus');
     expect(wrapper.vm.$el.nextElementSibling.classList.contains('bootstrap-datetimepicker-widget')).toBe(true);
   });
 

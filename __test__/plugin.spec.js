@@ -1,15 +1,10 @@
-import Plugin from '../src/index';
-import {mount} from 'vue-test-utils';
-// Lets import full build
-import Vue from 'vue/dist/vue.common';
+import Component from '../src/index';
+import {mount, createLocalVue} from 'vue-test-utils';
 
-Vue.config.productionTip = false;
 describe('datepicker global component', () => {
 
-  // Make a copy of local vue
-  let localVue = Vue.extend();
-  // Define a global component
-  localVue.use(Plugin, 'date-picker');
+  let localVue = createLocalVue();
+  localVue.use(Component, 'date-picker');
 
   test('works as plugin', () => {
 
@@ -31,11 +26,13 @@ describe('datepicker global component', () => {
       localVue
     });
 
-    let elem = wrapper.vm.$el.firstChild;
-    expect(elem.tagName).toBe('INPUT');
-    expect(elem.value).toBe('10/10/2017');
-    expect(elem.getAttribute('name')).toEqual('date');
-    expect(elem.getAttribute('class')).toContain('date-picker');
+    expect(wrapper.contains(Component)).toBe(true);
+
+    let input = wrapper.find(Component);
+    expect(input.is('input')).toBe(true);
+    expect(input.vm.$el.value).toBe('10/10/2017');
+    expect(input.classes()).toContain('date-picker');
+    expect(input.vm.$el.getAttribute('name')).toEqual('date');
   });
 
 });

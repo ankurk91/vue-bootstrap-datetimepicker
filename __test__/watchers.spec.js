@@ -9,7 +9,6 @@ describe('datepicker watchers', () => {
 
   beforeEach(() => {
     wrapper = shallow(Component, {
-      attachToDocument: true,
       propsData: {
         value: null,
         config: {}

@@ -17,7 +17,6 @@ describe('datepicker props', () => {
 
   beforeEach(() => {
     wrapper = shallow(Component, {
-      attachToDocument: true,
       propsData: props
     });
   });
@@ -41,6 +40,7 @@ describe('datepicker props', () => {
 
     expect(vModel.validator(false)).toBe(false);
     expect(vModel.validator(undefined)).toBe(false);
+
     expect(vModel.validator(new Date())).toBe(true);
     expect(vModel.validator(null)).toBe(true);
     expect(vModel.validator('2017-12-12')).toBe(true);
