@@ -146,7 +146,7 @@
           <div class="modal-body">
             <div class="form-group">
               <label>Select a date</label>
-              <date-picker v-model="form.dateModal" :config="{format:'LLL'}"></date-picker>
+              <date-picker v-model="form.dateModal"></date-picker>
             </div>
             <pre>{{form.dateModal}}</pre>
           </div>
@@ -209,13 +209,15 @@
             useCurrent: false,
             showClear: true,
             showClose: true,
-            minDate: moment()
+            minDate: moment(),
+            maxDate: false
           },
           end: {
             format: 'DD/MM/YYYY',
             useCurrent: false,
             showClear: true,
             showClose: true,
+            minDate: moment()
           }
         },
       }
@@ -247,9 +249,11 @@
         console.log('listen To dp.change event - ', ...args);
       },
       onStartChange(e) {
+        console.log('onStartChange', e.date);
         this.$set(this.configs.end, 'minDate', e.date || null);
       },
       onEndChange(e) {
+        console.log('onEndChange', e.date);
         this.$set(this.configs.start, 'maxDate', e.date || null);
       }
     },

@@ -81,8 +81,11 @@
        *
        * @param newConfig Object
        */
-      config(newConfig) {
-        this.dp && this.dp.options(Object.assign({}, this.dp.options(), newConfig));
+      config: {
+        deep: true,
+        handler(newConfig) {
+          this.dp && this.dp.options(Object.assign({}, this.dp.options(), newConfig));
+        }
       }
     },
     methods: {
