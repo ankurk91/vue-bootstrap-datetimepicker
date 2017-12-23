@@ -84,7 +84,7 @@
       config: {
         deep: true,
         handler(newConfig) {
-          this.dp && this.dp.options(Object.assign({}, this.dp.options(), newConfig));
+          this.dp && this.dp.options(newConfig);
         }
       }
     },
