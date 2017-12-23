@@ -1,6 +1,6 @@
 {
   "name": "vue-bootstrap-datetimepicker",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "description": "Vue.js component for bootstrap-datetimepicker",
   "main": "dist/vue-bootstrap-datetimepicker.js",
   "unpkg": "dist/vue-bootstrap-datetimepicker.min.js",
@@ -10,6 +10,7 @@
   },
   "keywords": [
     "vue",
+    "bootstrap",
     "bootstrap-datetimepicker",
     "vue-bootstrap-datetimepicker",
     "datepicker",
@@ -24,7 +25,6 @@
   "scripts": {
     "test": "node ./node_modules/jest/bin/jest.js",
     "test:watch": "npm run test -- --watch --onlyChanged --notify",
-    "lint": "eslint --ext .js,.vue --fix src",
     "start": "npm run dev",
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config=webpack.config.dev.js",
     "build": "node ./node_modules/webpack/bin/webpack.js --hide-modules -p --progress",

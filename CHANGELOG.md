@@ -1,5 +1,8 @@
 # Changelog
 
+## [4.1.2](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/4.1.1...4.1.2) 
+* Internal: no longer require to use `Object.assign`
+
 ## [4.1.1](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/4.1.0...4.1.1) 
 * Fix: a bug where changes in `config` properties were not being detected
 
