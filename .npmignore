@@ -10,15 +10,12 @@
 
 .babelrc
 .editorconfig
-.eslintignore
-.eslintrc
 .gitattributes
 /.gitignore
 .npmignore
 .travis.yml
-CHANGELOG.md
 
-bower.json
+
 npm-shrinkwrap.json
 package-lock.json
 yarn.lock

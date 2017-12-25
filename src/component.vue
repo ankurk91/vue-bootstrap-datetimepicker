@@ -52,9 +52,7 @@
       /* istanbul ignore if */
       if (this.dp) return;
       // Handle wrapped input
-      let node = this.wrap ? this.$el.parentNode : this.$el;
-      // Cache DOM
-      this.elem = jQuery(node);
+      this.elem = jQuery(this.wrap ? this.$el.parentNode : this.$el);
       // Init date-picker
       this.elem.datetimepicker(this.config);
       // Store data control
@@ -110,8 +108,10 @@
         })
       }
     },
+    /**
+     * Free up memory
+     */
     beforeDestroy() {
-      // Free up memory
       /* istanbul ignore else */
       if (this.dp) {
         this.dp.destroy();

@@ -18,7 +18,8 @@ Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.gi
 * Reactive [config](http://eonasdan.github.io/bootstrap-datetimepicker/Options/) options
     - You can change config options dynamically
     - Component will watch for changes and apply them
-    - You are suggested to modify config via [Vue.set](https://vuejs.org/v2/api/#Vue-set)    
+    - You are suggested to modify config via [Vue.set](https://vuejs.org/v2/api/#Vue-set)  
+* Emits all possible events      
 * Play nice with [vee-validate](https://github.com/logaretm/vee-validate) validation library
 
 
@@ -85,6 +86,13 @@ yarn add vue-bootstrap-datetimepicker
 ```
 This will register a global component `<date-picker>` 
 
+## Events
+* The component emits all available [events](http://eonasdan.github.io/bootstrap-datetimepicker/Events)
+* You can listen to them in your component like -
+```html
+<date-picker v-model="date" @dp-hide="doSomethingOnHide" @dp-change="doSomethingOnChange"></date-picker>
+```
+
 ## Available props
 The component accepts these props:
 
@@ -93,13 +101,6 @@ The component accepts these props:
 | v-model / value | String / Date Object / [moment](https://momentjs.com/) / null | `null` | Set or Get date-picker value |
 | config          | Object             | `{}` | Datetime picker configuration [options](http://eonasdan.github.io/bootstrap-datetimepicker/Options/)|
 | wrap            | Boolean            | `false` | Set this to true when wrapped in 'input-group' |
-
-## Events
-* The component will emit all available [events](http://eonasdan.github.io/bootstrap-datetimepicker/Events)
-* You can listen to them in your component like -
-```html
-<date-picker v-model="date" @dp-hide="doSomethingOnHide"></date-picker>
-```
 
 ## Install in non-module environments (without webpack)
 * Acquire required files
@@ -129,7 +130,7 @@ The component accepts these props:
   </div>
 </div>
 <script>
-  //Initialize as global component
+  // Initialize as global component
   Vue.component('date-picker', VueBootstrapDatetimePicker.default);
   
   new Vue({
@@ -175,7 +176,7 @@ mix.autoload({
 * This should open the demo page at ``http://localhost:8000`` in your default web browser
 
 
-### Testing
+## Testing
 * This package is using [Jest](https://github.com/facebook/jest) and [vue-test-utils](https://github.com/vuejs/vue-test-utils) for testing.
 * Tests can be found in `__test__` folder.
 * Execute tests with this command - `yarn test`

@@ -31,7 +31,7 @@ describe('datepicker component', () => {
   test('clean up on destroy', () => {
     wrapper.destroy();
     expect(wrapper.isEmpty()).toBe(true);
-    expect(wrapper.vm.$data.dp).toBe(null);
+    expect(wrapper.vm.dp).toBe(null);
   });
 
 });
