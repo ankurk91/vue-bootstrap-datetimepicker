@@ -8,7 +8,7 @@ describe('datepicker global component', () => {
 
   test('works as plugin', () => {
 
-    let app = localVue.component('app', {
+    let app = {
       template: `<div id="app">
                   <date-picker name="date" class="date-picker" v-model="date" :config="config"></date-picker>
                  </div>`,
@@ -20,7 +20,7 @@ describe('datepicker global component', () => {
           }
         }
       }
-    });
+    };
 
     let wrapper = mount(app, {
       localVue
@@ -32,7 +32,7 @@ describe('datepicker global component', () => {
     expect(input.is('input')).toBe(true);
     expect(input.vm.$el.value).toBe('10/10/2017');
     expect(input.classes()).toContain('date-picker');
-    expect(input.vm.$el.getAttribute('name')).toEqual('date');
+    expect(input.attributes().name).toEqual('date');
   });
 
 });

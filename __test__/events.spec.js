@@ -6,7 +6,7 @@ describe('datepicker component events', () => {
   let localVue = createLocalVue();
 
   test('emits events', (done) => {
-    let app = localVue.component('app', {
+    let app = {
       template: `<div id="app">
                   <date-picker class="date-picker" v-model="date" :config="config" @dp-change="onChange"></date-picker>
                  </div>`,
@@ -26,7 +26,7 @@ describe('datepicker component events', () => {
           // shh...
         }
       }
-    });
+    };
 
     let wrapper = mount(app, {
       localVue
