@@ -22,7 +22,11 @@ Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.gi
 * Emits all possible events      
 * Play nice with [vee-validate](https://github.com/logaretm/vee-validate) validation library
 
-
+## Requirements
+* Bootstrap ^3.3.7 (only css)
+* jQuery >=1.8.3 || ^3.2.1
+* [Moment.js](https://momentjs.com/) ^2.18
+ 
 ## Installation
 ```bash
 # npm
@@ -31,13 +35,34 @@ npm install vue-bootstrap-datetimepicker --save
 # Yarn
 yarn add vue-bootstrap-datetimepicker
 ```
+  
+#### Using Webpack? 
+* Webpack users need to configure [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/)
+```js
+// webpack.config.js
+plugins: [
+    new webpack.ProvidePlugin({
+      Vue: ['vue/dist/vue.esm.js', 'default'],
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      $: 'jquery',
+      moment: 'moment',
+    }),
+  ]  
+```
 
-## Requirements
-* Bootstrap ^3.3.7 (only css)
-* jQuery >=1.8.3 || ^3.2.1
-* [Moment.js](https://momentjs.com/) ^2.18
-    
-## Usage
+#### Using Laravel Mix ?
+* Update your `webpack.mix.js` file, [ref](https://github.com/JeffreyWay/laravel-mix/blob/master/docs/autoloading.md)
+```js
+// webpack.mix.js
+mix.autoload({
+    'jquery': ['$', 'window.jQuery', 'jQuery'],
+    'vue': ['Vue','window.Vue'],   
+    'moment': ['moment','window.moment'],   
+  })
+```
+
+## Usage Example
 ```html
 <template>
   <div class="container">
@@ -102,10 +127,9 @@ The component accepts these props:
 | config          | Object             | `{}` | Datetime picker configuration [options](http://eonasdan.github.io/bootstrap-datetimepicker/Options/)|
 | wrap            | Boolean            | `false` | Set this to true when wrapped in 'input-group' |
 
-## Install in non-module environments (without webpack)
-* Acquire required files
+### Install in non-module environments (without webpack)
 ```html
-<!-- Date-picker dependency-->
+<!-- Date-picker dependencies -->
 <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.min.js"></script>
 <script src="https://unpkg.com/moment@2.18.1/min/moment.min.js"></script>
 <link href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -118,54 +142,10 @@ The component accepts these props:
 <script src="https://unpkg.com/vue@2.5/dist/vue.min.js"></script>
 <!-- Lastly add this package -->
 <script src="https://unpkg.com/vue-bootstrap-datetimepicker"></script>
-```
-* Use the component anywhere in your app like this
-```html
-<!-- index.html -->
-<div id="app" class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <date-picker v-model="date" name="date-of-birth"></date-picker>
-    </div>
-  </div>
-</div>
 <script>
   // Initialize as global component
   Vue.component('date-picker', VueBootstrapDatetimePicker.default);
-  
-  new Vue({
-    el: '#app',
-    data: {
-      date: null
-    },    
-  });
 </script>
-```
-
-### Using Webpack? 
-* Webpack users need to configure [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/)
-```js
-// webpack.config.js
-plugins: [
-    new webpack.ProvidePlugin({
-      Vue: ['vue/dist/vue.esm.js', 'default'],
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      $: 'jquery',
-      moment: 'moment',
-    }),
-  ]  
-```
-
-### Using Laravel Mix ?
-* Update your `webpack.mix.js` file, [ref](https://github.com/JeffreyWay/laravel-mix/blob/master/docs/autoloading.md)
-```js
-// webpack.mix.js
-mix.autoload({
-    'jquery': ['$', 'window.jQuery', 'jQuery'],
-    'vue': ['Vue','window.Vue'],   
-    'moment': ['moment','window.moment'],   
-  })
 ```
 
 ## Run examples on your localhost
@@ -174,7 +154,6 @@ mix.autoload({
 * Install dependencies - `yarn install`
 * Run webpack dev server - `yarn start`
 * This should open the demo page at ``http://localhost:8000`` in your default web browser
-
 
 ## Testing
 * This package is using [Jest](https://github.com/facebook/jest) and [vue-test-utils](https://github.com/vuejs/vue-test-utils) for testing.
