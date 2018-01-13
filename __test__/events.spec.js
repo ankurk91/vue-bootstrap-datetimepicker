@@ -1,5 +1,5 @@
 import component from '../src/component.vue';
-import {mount, createLocalVue} from 'vue-test-utils';
+import {mount, createLocalVue} from '@vue/test-utils';
 
 describe('datepicker component events', () => {
 
