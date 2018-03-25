@@ -161,7 +161,7 @@
   </section>
 </template>
 
-<script type="text/javascript">
+<script>
   import Vue from 'vue';
 
   import datePicker from '../src/index';

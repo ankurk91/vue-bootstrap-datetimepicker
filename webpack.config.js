@@ -18,15 +18,23 @@ module.exports = {
     extensions: ['.js', '.json', '.vue']
   },
   entry: './src/index.js',
-  // Don't include them into library build
-  externals: [
-    'vue',
-    'jquery',
-    'moment',
-    'moment-timezone',
-    'eonasdan-bootstrap-datetimepicker',
-    'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css'
-  ],
+  // Don't include these into library build
+  externals: {
+    'vue': {
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue',
+      root: 'Vue'
+    },
+    'jquery': {
+      commonjs: 'jquery',
+      commonjs2: 'jquery',
+      amd: 'jquery',
+      root: 'jQuery'
+    },
+    'moment': 'moment',
+    'eonasdan-bootstrap-datetimepicker': 'eonasdan-bootstrap-datetimepicker'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'vue-bootstrap-datetimepicker.min.js',
