@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
   context: __dirname,
@@ -60,6 +61,7 @@ module.exports = {
     new CleanWebpackPlugin(['./dist']),
     new UnminifiedWebpackPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin(),
+    new VueLoaderPlugin(),
   ],
   devtool: false,
   performance: {
