@@ -4,6 +4,7 @@ import {mount, createLocalVue} from '@vue/test-utils';
 describe('datepicker component events', () => {
 
   let localVue = createLocalVue();
+  let onChangeStub = jest.fn();
 
   test('emits events', (done) => {
     let app = {
@@ -22,9 +23,7 @@ describe('datepicker component events', () => {
         datePicker: component
       },
       methods: {
-        onChange(event) {
-          // shh...
-        }
+        onChange: onChangeStub
       }
     };
 
@@ -32,12 +31,10 @@ describe('datepicker component events', () => {
       localVue
     });
 
-    const spy = jest.spyOn(wrapper.vm, 'onChange');
-    wrapper.setData({date: new Date()});
+    wrapper.setData({date: '11/11/2018'});
 
     wrapper.vm.$nextTick(() => {
-      expect(spy).toHaveBeenCalled();
-      spy.mockReset();
+      expect(onChangeStub).toHaveBeenCalled();
       done()
     })
 
