@@ -1,30 +1,37 @@
 <template>
   <section class="container">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Vue.js datetime picker Demo</a>
-        </div>
-
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="https://www.npmjs.com/package/vue-bootstrap-datetimepicker" target="_blank"> npm</a></li>
-          <li><a href="https://github.com/ankurk91/vue-bootstrap-datetimepicker" target="_blank"> Github</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <span class="navbar-brand mb-0">Vue.js datetime picker Demo</span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mobile-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.npmjs.com/package/vue-bootstrap-datetimepicker"
+               target="_blank"> npm</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/ankurk91/vue-bootstrap-datetimepicker"
+               target="_blank"> Github</a></li>
         </ul>
       </div>
     </nav>
+    <p class="mb-2"></p>
 
     <div class="row">
       <div class="col-md-8">
 
-        <div class="row">
-          <div class="col-md-12">
-            <button class="btn btn-default" @click.prevent="setNewValue()">Set new value pragmatically</button>
-            <button class="btn btn-default" @click.prevent="updateConfig()">Reactive configs (Change viewMode)
-            </button>
-          </div>
-        </div>
+        <form class="mb-2 form-inline">
+          <button type="button" class="btn btn-secondary mr-2" @click.prevent="setNewValue()">
+            Set new value pragmatically
+          </button>
+          <button type="button" class="btn btn-secondary mx-2" @click.prevent="updateConfig()">
+            Reactive configs (Change viewMode)
+          </button>
+        </form>
 
-        <form method="post" action="/" @submit.prevent="submit()">
+        <form class="card card-body" method="post" action="/" @submit.prevent="submit()">
 
           <div class="form-group">
             <label>Select date (basic)</label>
@@ -33,12 +40,14 @@
 
           <div class="form-group">
             <label for="date-time-input">Select date time (wrap)</label>
-            <div class="input-group date">
+            <div class="input-group">
               <date-picker v-model="form.dateWrap" id="date-time-input"
                            :wrap="true" :config="configs.wrap">
               </date-picker>
-              <div class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar"></span>
+              <div class="input-group-append">
+                <button class="btn btn-default datepickerbutton" type="button" title="Toggle">
+                  <i class="far fa-calendar"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -48,8 +57,10 @@
             <div class="input-group">
               <date-picker :config="configs.timePicker" v-model="form.time" :wrap="true"
                            placeholder="Time"></date-picker>
-              <div class="input-group-addon">
-                <span class="glyphicon glyphicon-time"></span>
+              <div class="input-group-append">
+                <button class="btn btn-default datepickerbutton" type="button" title="Toggle">
+                  <i class="far fa-clock"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -60,17 +71,17 @@
                          name="date-of-purchase"
                          v-validate="{required:true}"
                          placeholder="Date of purchase"
+                         :class="{'is-invalid' : errors.has('date-of-purchase')}"
             ></date-picker>
             <span v-show="errors.has('date-of-purchase')"
-                  class="help-block">{{ errors.first('date-of-purchase') }}</span>
+                  class="invalid-feedback">{{ errors.first('date-of-purchase') }}</span>
           </div>
 
           <div class="form-group">
             <label>Works in modals as well </label>
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#date-modal">Open in
-              modal
-
-
+            <button type="button" class="btn btn-info" data-toggle="modal"
+                    data-target="#date-modal">
+              Open in modal
             </button>
           </div>
 
@@ -114,9 +125,9 @@
       </div>
 
       <aside class="col-md-4">
-        <div class="panel panel-info">
-          <div class="panel-heading"> Links</div>
-          <div class="panel-body">
+        <div class="card">
+          <div class="card-header"> Links</div>
+          <div class="card-body">
             <ul>
               <li><a href="https://github.com/ankurk91/vue-bootstrap-datetimepicker" target="_blank">Github</a></li>
               <li><a href="https://www.npmjs.com/package/vue-bootstrap-datetimepicker" target="_blank">npm</a></li>
@@ -139,9 +150,10 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-              aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Modal example</h4>
+            <h5 class="modal-title">Modal example</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <div class="modal-body">
             <div class="form-group">
@@ -151,8 +163,8 @@
             <pre>{{form.dateModal}}</pre>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -166,7 +178,22 @@
 
   import datePicker from '../src/index';
   import moment from 'moment';
-  import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css';
+  import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
+
+  // Using font-awesome 5 icons
+  $.extend(true, $.fn.datetimepicker.defaults, {
+    icons: {
+      time: 'far fa-clock',
+      date: 'far fa-calendar',
+      up: 'fas fa-arrow-up',
+      down: 'fas fa-arrow-down',
+      previous: 'fas fa-chevron-left',
+      next: 'fas fa-chevron-right',
+      today: 'fas fa-calendar-check',
+      clear: 'far fa-trash-alt',
+      close: 'far fa-times-circle'
+    }
+  });
 
   export default {
     name: 'app',

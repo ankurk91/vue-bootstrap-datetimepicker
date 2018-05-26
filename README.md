@@ -1,4 +1,4 @@
-# Vue-Bootstrap-DatetimePicker
+# Vue-Bootstrap-4-DatetimePicker
 
 [![vue-js](https://img.shields.io/badge/vue.js-2.x-brightgreen.svg?maxAge=604800)](https://vuejs.org/)
 [![downloads](https://img.shields.io/npm/dt/vue-bootstrap-datetimepicker.svg)](http://npm-stats.com/~packages/vue-bootstrap-datetimepicker)
@@ -23,8 +23,8 @@ Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.gi
 * Play nice with [vee-validate](https://github.com/logaretm/vee-validate) validation library
 
 ## Requirements
-* Bootstrap ^3.3.7 (only css)
-* jQuery >=1.8.3 || ^3.2.1
+* Bootstrap ^4 (only css)
+* jQuery >=1.8.3 
 * [Moment.js](https://momentjs.com/) ^2.18
  
 ## Installation
@@ -82,7 +82,7 @@ mix.autoload({
   import datePicker from 'vue-bootstrap-datetimepicker';
   
   // Import date picker css
-  import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css';
+  import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
    
   export default {    
     data () {
@@ -130,13 +130,13 @@ The component accepts these props:
 ### Install in non-module environments (without webpack)
 ```html
 <!-- Date-picker dependencies -->
-<script src="https://unpkg.com/jquery@3.2.1/dist/jquery.min.js"></script>
-<script src="https://unpkg.com/moment@2.18.1/min/moment.min.js"></script>
-<link href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://unpkg.com/jquery@3.3/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/moment@2.18/min/moment.min.js"></script>
+<link href="https://unpkg.com/bootstrap@4/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Date-picker itself -->
-<script src="https://unpkg.com/eonasdan-bootstrap-datetimepicker@4.17.47/build/js/bootstrap-datetimepicker.min.js"></script>
-<link href="https://unpkg.com/eonasdan-bootstrap-datetimepicker@4.17.47/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<script src="https://unpkg.com/pc-bootstrap4-datetimepicker@4.17/build/js/bootstrap-datetimepicker.min.js"></script>
+<link href="https://unpkg.com/pc-bootstrap4-datetimepicker@4.17/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
 <!-- Vue js -->
 <script src="https://unpkg.com/vue@2.5/dist/vue.min.js"></script>

@@ -6,7 +6,7 @@
 ```
 
 **Tell about your platform**
-* eonasdan-bootstrap-datetimepicker version : 4.x.x
+* pc-bootstrap4-datetimepicker : 4.x.x
 * Vue.js version : 2.x.x
 * Browser name and version : Chrome|Firefox|Safari x.x.x
 * This package version : x.x.x | latest

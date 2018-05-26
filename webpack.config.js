@@ -34,7 +34,7 @@ module.exports = {
       root: 'jQuery'
     },
     'moment': 'moment',
-    'eonasdan-bootstrap-datetimepicker': 'eonasdan-bootstrap-datetimepicker'
+    'pc-bootstrap4-datetimepicker': 'pc-bootstrap4-datetimepicker'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -60,7 +60,6 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['./dist']),
     new UnminifiedWebpackPlugin(),
-    new webpack.optimize.ModuleConcatenationPlugin(),
     new VueLoaderPlugin(),
     new UglifyJsPlugin({
       sourceMap: false,

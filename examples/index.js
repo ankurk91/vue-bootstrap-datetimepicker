@@ -9,10 +9,15 @@ import VeeValidate, {Validator} from 'vee-validate';
 
 Vue.use(VeeValidate);
 
-//  jQuery is required by bootstrap to work
+// jQuery is required by bootstrap to work
 window.$ = window.jQuery = require('jquery');
-import 'bootstrap';
+require('popper.js');
+require('bootstrap');
+
 import 'bootstrap/dist/css/bootstrap.css';
+import '@fortawesome/fontawesome-free-webfonts/css/fontawesome.css';
+import '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css';
+import '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css';
 
 import App from './App.vue';
 

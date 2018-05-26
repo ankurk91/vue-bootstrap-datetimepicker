@@ -1,5 +1,8 @@
 # Changelog
 
+## 5.0.0-beta.1
+* Upgrade to [bootstrap-4](https://github.com/pingcheng/bootstrap4-datetimepicker)
+
 ## 4.1.3
 * Updated dependencies
 
