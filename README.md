@@ -12,6 +12,14 @@ Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.gi
 
 ## Demo on [JSFiddle](https://jsfiddle.net/ankurk91/zupazg2u/)
 
+## Versions
+This package is also available for Bootstrap v4.x, internal API remains same.
+
+| Version  | Underlying Library                   | Bootstrap CSS version   | API Docs         |
+| :---     |  :---:                               | :---:                   | :---             |
+| 4.x      | `eonasdan-bootstrap-datetimepicker`  | 3.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
+| 5.x beta | `pc-bootstrap4-datetimepicker`       | 4.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
+
 ## Features
 * Reactive ``v-model`` value
     - You can change datepicker value programmatically 
