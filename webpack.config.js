@@ -60,7 +60,6 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['./dist']),
     new UnminifiedWebpackPlugin(),
-    new webpack.optimize.ModuleConcatenationPlugin(),
     new VueLoaderPlugin(),
     new UglifyJsPlugin({
       sourceMap: false,
