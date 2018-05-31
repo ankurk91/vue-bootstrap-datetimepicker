@@ -30,10 +30,10 @@ Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.gi
 ## Installation
 ```bash
 # npm
-npm install vue-bootstrap-datetimepicker --save
+npm install vue-bootstrap-datetimepicker@beta --save
 
 # Yarn
-yarn add vue-bootstrap-datetimepicker
+yarn add vue-bootstrap-datetimepicker@beta
 ```
   
 #### Using Webpack? 
@@ -106,7 +106,7 @@ mix.autoload({
   import Vue from 'vue';
   import datePicker from 'vue-bootstrap-datetimepicker';
   import 'bootstrap/dist/css/bootstrap.css';
-  import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css';
+  import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
   Vue.use(datePicker);
 ```
 This will register a global component `<date-picker>` 
@@ -150,10 +150,10 @@ The component accepts these props:
 
 ## Run examples on your localhost
 * Clone this repo
-* You should have node-js >=6.10 and yarn >=1.x pre-installed
+* You should have node-js `>=6.10` and yarn `>=1.x` pre-installed
 * Install dependencies - `yarn install`
 * Run webpack dev server - `yarn start`
-* This should open the demo page at ``http://localhost:8000`` in your default web browser
+* This should open the demo page at ``http://localhost:9000`` in your default web browser
 
 ## Testing
 * This package is using [Jest](https://github.com/facebook/jest) and [vue-test-utils](https://github.com/vuejs/vue-test-utils) for testing.
