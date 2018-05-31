@@ -1,4 +1,4 @@
-# Vue-Bootstrap-DatetimePicker
+# Vue-Bootstrap-3-DatetimePicker
 
 [![vue-js](https://img.shields.io/badge/vue.js-2.x-brightgreen.svg?maxAge=604800)](https://vuejs.org/)
 [![downloads](https://img.shields.io/npm/dt/vue-bootstrap-datetimepicker.svg)](http://npm-stats.com/~packages/vue-bootstrap-datetimepicker)
@@ -15,10 +15,10 @@ Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.gi
 ## Versions
 This package is also available for Bootstrap v4.x, internal API remains same.
 
-| Version  | Underlying Library                   | Bootstrap CSS version   | API Docs         |
-| :---     |  :---:                               | :---:                   | :---             |
-| 4.x      | `eonasdan-bootstrap-datetimepicker`  | 3.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
-| 5.x beta | `pc-bootstrap4-datetimepicker`       | 4.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
+| Version  | Underlying Library                                                                                   | Bootstrap CSS version   | API Docs (same for both)        |
+| :---     |  :---:                                                                                               | :---:                   | :---             |
+| 4.x      | [eonasdan-bootstrap-datetimepicker](https://github.com/Eonasdan/bootstrap-datetimepicker) (Official) | 3.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
+| 5.x      | [pc-bootstrap4-datetimepicker](https://github.com/pingcheng/bootstrap4-datetimepicker)     (Fork)    | 4.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
 
 ## Features
 * Reactive ``v-model`` value
@@ -32,7 +32,7 @@ This package is also available for Bootstrap v4.x, internal API remains same.
 
 ## Requirements
 * Bootstrap ^3.3.7 (only css)
-* jQuery >=1.8.3 || ^3.2.1
+* jQuery >=1.8.3 
 * [Moment.js](https://momentjs.com/) ^2.18
  
 ## Installation
