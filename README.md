@@ -10,7 +10,15 @@
 
 Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.github.io/bootstrap-datetimepicker/)
 
-## Demo on [JSFiddle](https://jsfiddle.net/ankurk91/zupazg2u/)
+## Demo on [JSFiddle](https://jsfiddle.net/ankurk91/01407frf/)
+
+## Versions
+:point_right: If you are looking for the documentation of older version then switch to respective version branch.
+ 
+| Version  | Underlying Library                                                                                   | Bootstrap CSS version   | API Docs (same for both)        |
+| :---     |  :---:                                                                                               | :---:                   | :---             |
+| 4.x      | [eonasdan-bootstrap-datetimepicker](https://github.com/Eonasdan/bootstrap-datetimepicker) (Official) | 3.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
+| 5.x      | [pc-bootstrap4-datetimepicker](https://github.com/pingcheng/bootstrap4-datetimepicker)     (Fork)    | 4.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
 
 ## Features
 * Reactive ``v-model`` value
@@ -20,7 +28,7 @@ Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.gi
     - Component will watch for changes and apply them
     - You are suggested to modify config via [Vue.set](https://vuejs.org/v2/api/#Vue-set)  
 * Emits all possible events      
-* Play nice with [vee-validate](https://github.com/logaretm/vee-validate) validation library
+* Works with [vee-validate](https://github.com/logaretm/vee-validate) validation library
 
 ## Requirements
 * Bootstrap ^4 (only css)
@@ -51,7 +59,7 @@ plugins: [
   ]  
 ```
 
-#### Using Laravel Mix ?
+#### Using Laravel Mix?
 * Update your `webpack.mix.js` file, [ref](https://github.com/JeffreyWay/laravel-mix/blob/master/docs/autoloading.md)
 ```js
 // webpack.mix.js
@@ -62,13 +70,32 @@ mix.autoload({
   })
 ```
 
+#### Icon Fonts missing?
+Bootstrap v4 does not come with any icon fonts. You can import [font-awesome](https://www.npmjs.com/package/@fortawesome/fontawesome-free-webfonts) v5 icons.
+```js
+// app.js
+jQuery.extend(true, jQuery.fn.datetimepicker.defaults, {
+    icons: {
+      time: 'far fa-clock',
+      date: 'far fa-calendar',
+      up: 'fas fa-arrow-up',
+      down: 'fas fa-arrow-down',
+      previous: 'fas fa-chevron-left',
+      next: 'fas fa-chevron-right',
+      today: 'fas fa-calendar-check',
+      clear: 'far fa-trash-alt',
+      close: 'far fa-times-circle'
+    }
+});
+```
+
 ## Usage Example
 ```html
 <template>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <date-picker v-model="date" :config="config"></date-picker>
+        <date-picker v-model="date" :config="options"></date-picker>
       </div>
     </div>
   </div>
@@ -88,7 +115,7 @@ mix.autoload({
     data () {
       return {
         date: new Date(),
-        config: {
+        options: {
           format: 'DD/MM/YYYY',
           useCurrent: false,
         }       

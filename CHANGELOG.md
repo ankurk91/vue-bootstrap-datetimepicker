@@ -2,9 +2,13 @@
 
 ## 5.0.0-beta.1
 * Upgrade to [bootstrap-4](https://github.com/pingcheng/bootstrap4-datetimepicker)
+* Switch underlying library to [pc-bootstrap4-datetimepicker](https://github.com/pingcheng/bootstrap4-datetimepicker)
 
-## 4.1.3
-* Updated dependencies
+## [4.1.4](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/4.1.3...4.1.4)
+* Update dependencies
+
+## [4.1.3](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/4.1.2...4.1.3)
+* Update dependencies
 
 ## [4.1.2](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/4.1.1...4.1.2) 
 * Internal: no longer require to use `Object.assign`
