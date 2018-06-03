@@ -171,7 +171,7 @@ The component accepts these props:
 <script src="https://unpkg.com/vue-bootstrap-datetimepicker"></script>
 <script>
   // Initialize as global component
-  Vue.component('date-picker', VueBootstrapDatetimePicker.default);
+  Vue.component('date-picker', VueBootstrapDatetimePicker);
 </script>
 ```
 
