@@ -1,5 +1,8 @@
 # Changelog
 
+## 5.0.0-beta.2
+* Change export names 
+
 ## 5.0.0-beta.1
 * Upgrade to [bootstrap-4](https://github.com/pingcheng/bootstrap4-datetimepicker)
 * Switch underlying library to [pc-bootstrap4-datetimepicker](https://github.com/pingcheng/bootstrap4-datetimepicker)

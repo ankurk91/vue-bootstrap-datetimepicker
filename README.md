@@ -71,7 +71,7 @@ mix.autoload({
 ```
 
 #### Icon Fonts missing?
-Bootstrap v4 does not come with any icon fonts. You can import [font-awesome](https://www.npmjs.com/package/@fortawesome/fontawesome-free-webfonts) v5 icons.
+* Bootstrap v4 does not come with any icon fonts. You can import [font-awesome](https://www.npmjs.com/package/@fortawesome/fontawesome-free-webfonts) v5 icons.
 ```js
 // app.js
 jQuery.extend(true, jQuery.fn.datetimepicker.defaults, {
@@ -168,7 +168,7 @@ The component accepts these props:
 <!-- Vue js -->
 <script src="https://unpkg.com/vue@2.5/dist/vue.min.js"></script>
 <!-- Lastly add this package -->
-<script src="https://unpkg.com/vue-bootstrap-datetimepicker"></script>
+<script src="https://unpkg.com/vue-bootstrap-datetimepicker@beta"></script>
 <script>
   // Initialize as global component
   Vue.component('date-picker', VueBootstrapDatetimePicker);
