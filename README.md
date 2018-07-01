@@ -8,17 +8,17 @@
 [![build-status](https://travis-ci.org/ankurk91/vue-bootstrap-datetimepicker.svg?branch=master)](https://travis-ci.org/ankurk91/vue-bootstrap-datetimepicker)
 [![codecov](https://codecov.io/gh/ankurk91/vue-bootstrap-datetimepicker/branch/master/graph/badge.svg)](https://codecov.io/gh/ankurk91/vue-bootstrap-datetimepicker)
 
-Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.github.io/bootstrap-datetimepicker/)
+Vue.js v2.x component for [tempusdominus-bootstrap-4](https://tempusdominus.github.io/bootstrap-4)
 
 ## Demo on [JSFiddle](https://jsfiddle.net/ankurk91/01407frf/)
 
 ## Versions
 :point_right: If you are looking for the documentation of older version then switch to respective version branch.
  
-| Version  | Underlying Library                                                                                   | Bootstrap CSS version   | API Docs (same for both)        |
-| :---     |  :---:                                                                                               | :---:                   | :---             |
-| 4.x      | [eonasdan-bootstrap-datetimepicker](https://github.com/Eonasdan/bootstrap-datetimepicker) (Official) | 3.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
-| 5.x      | [pc-bootstrap4-datetimepicker](https://github.com/pingcheng/bootstrap4-datetimepicker)     (Fork)    | 4.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
+| Version  | Underlying Library                                                                          | Bootstrap CSS version   | API Docs (same for both)        |
+| :---     |  :---:                                                                                      | :---:                   | :---             |
+| 4.x      | [eonasdan-bootstrap-datetimepicker](https://github.com/Eonasdan/bootstrap-datetimepicker)  | 3.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
+| 5.x      | [tempusdominus-bootstrap-4](https://github.com/tempusdominus/bootstrap-4)                  | 4.x                     | [Docs](https://tempusdominus.github.io/bootstrap-4) |
 
 ## Features
 * Reactive ``v-model`` value
@@ -74,7 +74,7 @@ mix.autoload({
 * Bootstrap v4 does not come with any icon fonts. You can import [font-awesome](https://www.npmjs.com/package/@fortawesome/fontawesome-free-webfonts) v5 icons.
 ```js
 // app.js
-jQuery.extend(true, jQuery.fn.datetimepicker.defaults, {
+$.extend(true, $.fn.datetimepicker.Constructor.Default, {
     icons: {
       time: 'far fa-clock',
       date: 'far fa-calendar',
@@ -109,7 +109,7 @@ jQuery.extend(true, jQuery.fn.datetimepicker.defaults, {
   import datePicker from 'vue-bootstrap-datetimepicker';
   
   // Import date picker css
-  import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
+  import 'tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css';
    
   export default {    
     data () {
@@ -133,16 +133,16 @@ jQuery.extend(true, jQuery.fn.datetimepicker.defaults, {
   import Vue from 'vue';
   import datePicker from 'vue-bootstrap-datetimepicker';
   import 'bootstrap/dist/css/bootstrap.css';
-  import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
+  import 'tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css';
   Vue.use(datePicker);
 ```
 This will register a global component `<date-picker>` 
 
 ## Events
-* The component emits all available [events](http://eonasdan.github.io/bootstrap-datetimepicker/Events)
+* The component emits all available [events](https://tempusdominus.github.io/bootstrap-4/Events/)
 * You can listen to them in your component like -
 ```html
-<date-picker v-model="date" @dp-hide="doSomethingOnHide" @dp-change="doSomethingOnChange"></date-picker>
+<date-picker v-model="date" @on-hide="doSomethingOnHide" @on-change="doSomethingOnChange"></date-picker>
 ```
 
 ## Available props
@@ -151,7 +151,7 @@ The component accepts these props:
 | Attribute       | Type               | Default               | Description      |
 | :---            |  :---:             | :---:                 | :---             |
 | v-model / value | String / Date Object / [moment](https://momentjs.com/) / null | `null` | Set or Get date-picker value |
-| config          | Object             | `{}` | Datetime picker configuration [options](http://eonasdan.github.io/bootstrap-datetimepicker/Options/)|
+| config          | Object             | `{}` | Datetime picker configuration [options](https://tempusdominus.github.io/bootstrap-4/Options/)|
 | wrap            | Boolean            | `false` | Set this to true when wrapped in 'input-group' |
 
 ### Install in non-module environments (without webpack)

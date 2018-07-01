@@ -35,7 +35,7 @@
 
           <div class="form-group">
             <label>Select date (basic)</label>
-            <date-picker v-model="form.date" :config="configs.basic" @dp-change="listenToChangeEvent"></date-picker>
+            <date-picker v-model="form.date" :config="configs.basic" @on-change="listenToChangeEvent"></date-picker>
           </div>
 
           <div class="form-group">
@@ -103,14 +103,14 @@
               <div class="form-group">
                 <label>Start date</label>
                 <date-picker v-model="form.startDate" :config="configs.start" ref="startDate"
-                             @dp-change="onStartChange"></date-picker>
+                             @on-change="onStartChange"></date-picker>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label>End date</label>
                 <date-picker v-model="form.endDate" :config="configs.end" ref="endDate"
-                             @dp-change="onEndChange"></date-picker>
+                             @on-change="onEndChange"></date-picker>
               </div>
             </div>
           </div>
@@ -131,8 +131,8 @@
             <ul>
               <li><a href="https://github.com/ankurk91/vue-bootstrap-datetimepicker" target="_blank">Github</a></li>
               <li><a href="https://www.npmjs.com/package/vue-bootstrap-datetimepicker" target="_blank">npm</a></li>
-              <li><a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank">
-                Bootstrap datetime picker
+              <li><a href="https://github.com/tempusdominus/bootstrap-4" target="_blank">
+                Bootstrap 4 datetime picker
               </a></li>
               <li><a
                 href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en"
@@ -178,10 +178,11 @@
 
   import datePicker from '../src/index';
   import moment from 'moment';
-  import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
+  import 'tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css';
 
   // Using font-awesome 5 icons
-  $.extend(true, $.fn.datetimepicker.defaults, {
+  // https://tempusdominus.github.io/bootstrap-4/Options/
+  $.extend(true, $.fn.datetimepicker.Constructor.Default, {
     icons: {
       time: 'far fa-clock',
       date: 'far fa-calendar',

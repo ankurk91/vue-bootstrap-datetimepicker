@@ -1,7 +1,11 @@
 <template>
 
   <div class="datetimepicker-inline" v-if="config.inline"></div>
-  <input type="text" class="form-control" v-else>
+  <input type="text"
+         class="form-control datetimepicker-input"
+         :id="id"
+         data-toggle="datetimepicker"
+         :data-target="`#${id}`" v-else>
 
 </template>
 
@@ -9,12 +13,13 @@
   import jQuery from 'jquery';
   import moment from 'moment';
 
-  import 'pc-bootstrap4-datetimepicker';
+  import 'tempusdominus-bootstrap-4';
   // You have to import css yourself
 
   // Events list without prefix
-  // http://eonasdan.github.io/bootstrap-datetimepicker/Events/
+  // https://tempusdominus.github.io/bootstrap-4/Events/
   const events = ['hide', 'show', 'change', 'error', 'update'];
+  const eventNameSpace = 'datetimepicker';
 
   export default {
     name: 'date-picker',
@@ -30,6 +35,12 @@
       config: {
         type: Object,
         default: () => ({})
+      },
+      id: {
+        type: String,
+        default: () => {
+          return 'input-' + Math.random().toString(36).substr(2, 9)
+        }
       },
       /**
        * You can set this to true when component is wrapped in input-group
@@ -56,11 +67,11 @@
       // Init date-picker
       this.elem.datetimepicker(this.config);
       // Store data control
-      this.dp = this.elem.data('DateTimePicker');
+      this.dp = this.elem.data('datetimepicker');
       // Set initial value
       this.dp.date(this.value);
       // Watch for changes
-      this.elem.on('dp.change', this.onChange);
+      this.elem.on('change.datetimepicker', this.onChange);
       // Register remaining events
       this.registerEvents();
     },
@@ -102,8 +113,8 @@
        */
       registerEvents() {
         events.forEach((name) => {
-          this.elem.on(`dp.${name}`, (...args) => {
-            this.$emit(`dp-${name}`, ...args);
+          this.elem.on(`${name}.${eventNameSpace}`, (...args) => {
+            this.$emit(`on-${name}`, ...args);
           });
         })
       }

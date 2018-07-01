@@ -34,7 +34,7 @@ module.exports = {
       root: 'jQuery'
     },
     'moment': 'moment',
-    'pc-bootstrap4-datetimepicker': 'pc-bootstrap4-datetimepicker'
+    'tempusdominus-bootstrap-4': 'tempusdominus-bootstrap-4'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

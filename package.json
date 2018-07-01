@@ -35,7 +35,7 @@
     "prepublishOnly": "npm run test && npm run build"
   },
   "dependencies": {
-    "pc-bootstrap4-datetimepicker": "^4.17.50"
+    "tempusdominus-bootstrap-4": "^5.0.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
