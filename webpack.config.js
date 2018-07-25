@@ -19,7 +19,6 @@ module.exports = {
     extensions: ['.js', '.json', '.vue']
   },
   entry: './src/index.js',
-  // Don't include these into library build
   externals: {
     'vue': {
       commonjs: 'vue',

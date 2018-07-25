@@ -45,7 +45,7 @@
                            :wrap="true" :config="configs.wrap">
               </date-picker>
               <div class="input-group-append">
-                <button class="btn btn-default datepickerbutton" type="button" title="Toggle">
+                <button class="btn btn-secondary datepickerbutton" type="button" title="Toggle">
                   <i class="far fa-calendar"></i>
                 </button>
               </div>
@@ -58,7 +58,7 @@
               <date-picker :config="configs.timePicker" v-model="form.time" :wrap="true"
                            placeholder="Time"></date-picker>
               <div class="input-group-append">
-                <button class="btn btn-default datepickerbutton" type="button" title="Toggle">
+                <button class="btn btn-primary datepickerbutton" type="button" title="Toggle">
                   <i class="far fa-clock"></i>
                 </button>
               </div>

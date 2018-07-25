@@ -17,9 +17,7 @@ module.exports = {
     },
     extensions: ['.js', '.json', '.vue'],
   },
-  entry: {
-    app: './examples/index.js',
-  },
+  entry: './examples/index.js',
   output: {
     path: path.resolve(__dirname, 'docs'),
     publicPath: '',
@@ -50,7 +48,6 @@ module.exports = {
             loader: "css-loader",
             options: {
               sourceMap: true,
-              minimize: false
             }
           },
         ],
@@ -99,8 +96,6 @@ module.exports = {
       $: 'jquery',
       moment: 'moment',
     }),
-    // Required when devServer.hot = true
-    new webpack.HotModuleReplacementPlugin(),
     new VueLoaderPlugin(),
   ],
   // webpack-serve related configs

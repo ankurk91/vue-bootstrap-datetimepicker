@@ -13,7 +13,7 @@ Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.gi
 ## Demo on [JSFiddle](https://jsfiddle.net/ankurk91/01407frf/)
 
 ## Versions
-:point_right: If you are looking for the documentation of older version then switch to respective version branch.
+:point_right: If you are looking for the documentation of an older version then switch to respective version branch.
  
 | Version  | Underlying Library                                                                                   | Bootstrap CSS version   | API Docs (same for both)        |
 | :---     |  :---:                                                                                               | :---:                   | :---             |
@@ -21,7 +21,7 @@ Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.gi
 | 5.x      | [pc-bootstrap4-datetimepicker](https://github.com/pingcheng/bootstrap4-datetimepicker)     (Fork)    | 4.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
 
 ## Features
-* Reactive ``v-model`` value
+* Reactive `v-model` value
     - You can change datepicker value programmatically 
 * Reactive [config](http://eonasdan.github.io/bootstrap-datetimepicker/Options/) options
     - You can change config options dynamically
@@ -157,18 +157,18 @@ The component accepts these props:
 ### Install in non-module environments (without webpack)
 ```html
 <!-- Date-picker dependencies -->
-<script src="https://unpkg.com/jquery@3.3/dist/jquery.min.js"></script>
-<script src="https://unpkg.com/moment@2.18/min/moment.min.js"></script>
-<link href="https://unpkg.com/bootstrap@4/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.18"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Date-picker itself -->
-<script src="https://unpkg.com/pc-bootstrap4-datetimepicker@4.17/build/js/bootstrap-datetimepicker.min.js"></script>
-<link href="https://unpkg.com/pc-bootstrap4-datetimepicker@4.17/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/pc-bootstrap4-datetimepicker@4.17/build/js/bootstrap-datetimepicker.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/pc-bootstrap4-datetimepicker@4.17/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
 <!-- Vue js -->
-<script src="https://unpkg.com/vue@2.5/dist/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5"></script>
 <!-- Lastly add this package -->
-<script src="https://unpkg.com/vue-bootstrap-datetimepicker@beta"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-bootstrap-datetimepicker@beta"></script>
 <script>
   // Initialize as global component
   Vue.component('date-picker', VueBootstrapDatetimePicker);
