@@ -8,7 +8,7 @@
 [![build-status](https://travis-ci.org/ankurk91/vue-bootstrap-datetimepicker.svg?branch=master)](https://travis-ci.org/ankurk91/vue-bootstrap-datetimepicker)
 [![codecov](https://codecov.io/gh/ankurk91/vue-bootstrap-datetimepicker/branch/master/graph/badge.svg)](https://codecov.io/gh/ankurk91/vue-bootstrap-datetimepicker)
 
-Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.github.io/bootstrap-datetimepicker/)
+Vue.js component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.github.io/bootstrap-datetimepicker/)
 
 ## Demo on [JSFiddle](https://jsfiddle.net/ankurk91/01407frf/)
 

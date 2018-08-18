@@ -1,5 +1,8 @@
 # Changelog
 
+## 5.0.0
+* Same as previous beta version but without beta dist tag
+
 ## 5.0.0-beta.2
 * Change export names 
 
