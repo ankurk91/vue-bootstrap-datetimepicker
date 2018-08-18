@@ -1,4 +1,4 @@
-# Vue-Bootstrap-4-DatetimePicker
+# Vue Bootstrap 4 DatetimePicker
 
 [![vue-js](https://img.shields.io/badge/vue.js-2.x-brightgreen.svg?maxAge=604800)](https://vuejs.org/)
 [![downloads](https://img.shields.io/npm/dt/vue-bootstrap-datetimepicker.svg)](http://npm-stats.com/~packages/vue-bootstrap-datetimepicker)
@@ -15,10 +15,10 @@ Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.gi
 ## Versions
 :point_right: If you are looking for the documentation of an older version then switch to respective version branch.
  
-| Version  | Underlying Library                                                                                   | Bootstrap CSS version   | API Docs (same for both)        |
-| :---     |  :---:                                                                                               | :---:                   | :---             |
-| 4.x      | [eonasdan-bootstrap-datetimepicker](https://github.com/Eonasdan/bootstrap-datetimepicker) (Official) | 3.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
-| 5.x      | [pc-bootstrap4-datetimepicker](https://github.com/pingcheng/bootstrap4-datetimepicker)     (Fork)    | 4.x                     | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
+| Package Version  | Bootstrap CSS version | Underlying Library                                                                                   | API Docs (same for both)        |
+| :---             | :---:                 |  :---:                                                                                               | :---             |
+| 4.x              | 3.x                   | [eonasdan-bootstrap-datetimepicker](https://github.com/Eonasdan/bootstrap-datetimepicker) (Official) | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
+| 5.x              | 4.x                   | [pc-bootstrap4-datetimepicker](https://github.com/pingcheng/bootstrap4-datetimepicker)     (Fork)    | [Docs](http://eonasdan.github.io/bootstrap-datetimepicker) |
 
 ## Features
 * Reactive `v-model` value
@@ -33,15 +33,15 @@ Vue.js v2.x component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.gi
 ## Requirements
 * Bootstrap ^4 (only css)
 * jQuery >=1.8.3 
-* [Moment.js](https://momentjs.com/) ^2.18
+* [Moment.js](https://momentjs.com/) ^2.22
  
 ## Installation
 ```bash
 # npm
-npm install vue-bootstrap-datetimepicker@beta --save
+npm install vue-bootstrap-datetimepicker --save
 
 # Yarn
-yarn add vue-bootstrap-datetimepicker@beta
+yarn add vue-bootstrap-datetimepicker
 ```
   
 #### Using Webpack? 
@@ -71,7 +71,7 @@ mix.autoload({
 ```
 
 #### Icon Fonts missing?
-* Bootstrap v4 does not come with any icon fonts. You can import [font-awesome](https://www.npmjs.com/package/@fortawesome/fontawesome-free-webfonts) v5 icons.
+* Bootstrap v4 does not come with any icon fonts. You can import [font-awesome](https://www.npmjs.com/package/@fortawesome/fontawesome-free) v5 icons css.
 ```js
 // app.js
 jQuery.extend(true, jQuery.fn.datetimepicker.defaults, {
@@ -158,7 +158,7 @@ The component accepts these props:
 ```html
 <!-- Date-picker dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.3"></script>
-<script src="https://cdn.jsdelivr.net/npm/moment@2.18"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Date-picker itself -->
@@ -168,7 +168,7 @@ The component accepts these props:
 <!-- Vue js -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5"></script>
 <!-- Lastly add this package -->
-<script src="https://cdn.jsdelivr.net/npm/vue-bootstrap-datetimepicker@beta"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-bootstrap-datetimepicker@5"></script>
 <script>
   // Initialize as global component
   Vue.component('date-picker', VueBootstrapDatetimePicker);
@@ -189,6 +189,14 @@ The component accepts these props:
 
 ## Changelog
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Caveats
+* :warning: Don't pass config option as inline literal object to `:config` prop.
+```html
+<!-- This will cause date picker to freeze -->
+<date-picker v-model="card" :config="{format: 'DD/MM/YYYY'}"></cleave>
+```
+* Vue.js can not detect changes when literal object/arrays passed within template, [see](https://github.com/vuejs/vue/issues/4060)
 
 ## License
 [MIT](LICENSE.txt) License

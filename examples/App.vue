@@ -181,7 +181,11 @@
   import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
 
   // Using font-awesome 5 icons
-  $.extend(true, $.fn.datetimepicker.defaults, {
+  import '@fortawesome/fontawesome-free/css/fontawesome.css';
+  import '@fortawesome/fontawesome-free/css/regular.css';
+  import '@fortawesome/fontawesome-free/css/solid.css';
+
+  jQuery.extend(true, jQuery.fn.datetimepicker.defaults, {
     icons: {
       time: 'far fa-clock',
       date: 'far fa-calendar',

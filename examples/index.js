@@ -17,9 +17,6 @@ require('popper.js');
 require('bootstrap');
 
 import 'bootstrap/dist/css/bootstrap.css';
-import '@fortawesome/fontawesome-free-webfonts/css/fontawesome.css';
-import '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css';
-import '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css';
 
 import App from './App.vue';
 

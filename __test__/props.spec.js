@@ -1,4 +1,4 @@
-import {shallowMount} from '@vue/test-utils'
+import {mount} from '@vue/test-utils'
 
 import Component from '../src/component.vue';
 import moment from 'moment';
@@ -16,7 +16,7 @@ describe('datepicker props', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallowMount(Component, {
+    wrapper = mount(Component, {
       propsData: props
     });
   });
