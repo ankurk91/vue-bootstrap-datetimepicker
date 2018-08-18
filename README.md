@@ -194,7 +194,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 * :warning: Don't pass config option as inline literal object to `:config` prop.
 ```html
 <!-- This will cause date picker to freeze -->
-<date-picker v-model="card" :config="{format: 'DD/MM/YYYY'}"></cleave>
+<date-picker v-model="card" :config="{format: 'DD/MM/YYYY'}"></date-picker>
 ```
 * Vue.js can not detect changes when literal object/arrays passed within template, [see](https://github.com/vuejs/vue/issues/4060)
 
