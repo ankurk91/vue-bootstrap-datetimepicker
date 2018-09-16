@@ -1,8 +1,6 @@
 <template>
-
   <div class="datetimepicker-inline" v-if="config.inline"></div>
   <input type="text" class="form-control" v-else>
-
 </template>
 
 <script>
@@ -12,9 +10,7 @@
   import 'pc-bootstrap4-datetimepicker';
   // You have to import css yourself
 
-  // Events list without prefix
-  // http://eonasdan.github.io/bootstrap-datetimepicker/Events/
-  const events = ['hide', 'show', 'change', 'error', 'update'];
+  import events from './events';
 
   export default {
     name: 'date-picker',
