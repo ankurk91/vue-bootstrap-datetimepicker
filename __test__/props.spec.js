@@ -26,13 +26,13 @@ describe('datepicker props', () => {
   });
 
   test('accepts config via prop', () => {
-    expect(wrapper.props().config).toEqual(props.config);
+    expect(wrapper.props('config')).toEqual(props.config);
     // dp is the datepicker instance
     expect(wrapper.vm.dp.options()).toHaveProperty('format', props.config.format);
   });
 
   test('accepts value via prop', () => {
-    expect(wrapper.props().value).toBe(props.value);
+    expect(wrapper.props('value')).toBe(props.value);
   });
 
   test('validates v-model', () => {

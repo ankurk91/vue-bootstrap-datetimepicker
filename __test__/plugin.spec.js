@@ -32,7 +32,7 @@ describe('datepicker global component', () => {
     expect(input.is('input')).toBe(true);
     expect(input.vm.$el.value).toBe('10/10/2017');
     expect(input.classes()).toContain('date-picker');
-    expect(input.attributes().name).toEqual('date');
+    expect(input.attributes('name')).toEqual('date');
   });
 
 });

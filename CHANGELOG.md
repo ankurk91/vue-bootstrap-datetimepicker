@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.0.1](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/5.0.0...5.0.1)
+* Final version
+
 ## [5.0.0](https://github.com/ankurk91/vue-bootstrap-datetimepicker/compare/4.1.3...5.0.0)
 * Same as previous beta version but without `beta` dist tag
 
