@@ -28,7 +28,7 @@ Vue.js component for [eonasdan-bootstrap-datetimepicker](http://eonasdan.github.
     - Component will watch for changes and apply them
     - You are suggested to modify config via [Vue.set](https://vuejs.org/v2/api/#Vue-set)  
 * Emits all possible events      
-* Works with [vee-validate](https://github.com/logaretm/vee-validate) validation library
+* Works with [vee-validate](https://github.com/logaretm/vee-validate) and other validation library
 
 ## Requirements
 * Bootstrap ^4 (only css)

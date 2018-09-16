@@ -82,6 +82,7 @@
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
       ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
     },
-    "collectCoverage": true
+    "collectCoverage": true,
+    "testURL": "http://localhost"
   }
 }
